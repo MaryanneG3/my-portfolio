@@ -24,7 +24,7 @@ export const aboutContent = {
             "Certificate in Technology Product Development Essentials (Level 4)",
           institute: "Mission Ready Auckland, New Zealand",
           startdate: "August 2024",
-          enddate: "November 2025",
+          enddate: "November 2024",
           certificateLink: "https://images.credential.net/embed/d9x17z3c.png",
         },
         2: {
