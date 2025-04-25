@@ -37,7 +37,7 @@ function Home() {
         </div>
 
         {showDetails && (
-          <div className="flex flex-col justify-evenly items-center w-[70%] h-full pb-20 pt-10">
+          <div className="flex flex-col justify-evenly items-center w-[70%] h-full pb-20 pt-10 bg-purple-50/20">
             <motion.div
               className="flex flex-col justify-center items-center w-[85%] h-[50%] text-center text-2xl text-purple-950"
               initial={{ opacity: 0, y: 50 }}
@@ -45,7 +45,7 @@ function Home() {
               transition={{ duration: 1, ease: "easeOut" }}
             >
               <motion.h2
-                className="text-4xl"
+                className="text-5xl"
                 initial={{ opacity: 0, z: 50 }}
                 animate={{ opacity: 1, z: 0 }}
                 transition={{ duration: 1, ease: "easeOut" }}
