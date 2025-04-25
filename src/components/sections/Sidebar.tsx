@@ -45,13 +45,20 @@ const Sidebar = () => {
                   className="pl-2 mt-2 flex flex-col gap-1 w-full h-full"
                 >
                   {link.sublinks.map((sublink, idx) => (
-                    <Link
+                    <button
                       key={idx}
-                      href={sublink.href}
-                      className="h-18 w-full flex items-center pl-5 py-1 text-xl text-purple-800 transition-colors duration-200 hover:rounded-lg hover:bg-purple-50/30 hover:font-bold"
+                      onClick={() => {
+                        const element = document.getElementById(
+                          sublink.href.replace("#", "")
+                        );
+                        if (element) {
+                          element.scrollIntoView({ behavior: "smooth" });
+                        }
+                      }}
+                      className="h-18 w-full flex items-center pl-5 py-1 text-xl text-left text-purple-800 cursor-pointer transition-colors duration-200 hover:rounded-lg hover:font-bold hover:bg-purple-50/30"
                     >
                       {sublink.label}
-                    </Link>
+                    </button>
                   ))}
                 </motion.div>
               )}

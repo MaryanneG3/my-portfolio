@@ -18,6 +18,7 @@ export default function About() {
                 {sublinks?.map((link, index) => (
                   <div
                     key={index}
+                    id={link.label.toLowerCase().replace(/\s+/g, "-")}
                     className="flex flex-col justify-start items-start gap-10 pl-10 h-full min-h-full w-full"
                   >
                     <h2>{link.label}</h2>
