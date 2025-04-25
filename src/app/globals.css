@@ -27,25 +27,25 @@ h2 {
 
 /* Custom Scrollbar */
 .custom-scrollbar::-webkit-scrollbar {
-  width: 15px;
+  width: 17px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
   margin-top: 10px;
   background: linear-gradient(
     to bottom,
-    rgb(255, 211, 255),
+    rgb(255, 193, 255),
     rgb(255, 236, 201)
   );
   border-radius: 10px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.558);
+  background: rgb(236, 167, 255);
   border-radius: 10px;
   margin: 5px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: white;
+  background: rgb(255, 247, 159);
 }
