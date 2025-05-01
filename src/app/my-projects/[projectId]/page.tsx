@@ -1,9 +1,11 @@
 import { projectContent } from "@/lib/projectDetails";
 import { notFound } from "next/navigation";
 
-interface PageProps {
-  params: { projectId: string };
-}
+type PageProps = {
+  params: {
+    projectId: string;
+  };
+};
 
 export default function ProjectPage({ params }: PageProps) {
   const { projectId } = params;
