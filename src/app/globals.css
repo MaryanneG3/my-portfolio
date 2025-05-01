@@ -5,22 +5,76 @@
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-space-grotesk), sans-serif;
+}
+
+h1 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.links-font {
+  font-family: var(--font-space-mono), sans-serif;
+}
+
+/* Custom Scrollbar - Vertical scroll */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 17px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  margin-top: 10px;
+  background: linear-gradient(
+    to bottom,
+    rgb(255, 193, 255),
+    rgb(255, 236, 201)
+  );
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgb(236, 167, 255);
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 247, 159);
+}
+
+/* Custom Scrollbar - Horizontal scroll */
+.custom-x-scrollbar::-webkit-scrollbar {
+  height: 10px;
+}
+
+.custom-x-scrollbar::-webkit-scrollbar-track {
+  background: linear-gradient(
+    to bottom,
+    rgb(255, 193, 255),
+    rgb(255, 236, 201)
+  );
+  border-radius: 10px;
+}
+
+.custom-x-scrollbar::-webkit-scrollbar-thumb {
+  background: rgb(236, 167, 255);
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.custom-x-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 247, 159);
+}
+
+/* Hide scrollbar */
+.scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
 }
