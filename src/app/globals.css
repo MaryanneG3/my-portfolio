@@ -16,16 +16,11 @@ h1 {
     "Lucida Sans", Arial, sans-serif;
 }
 
-h2 {
-  font-size: 30px;
-  font-weight: 500;
-}
-
 .links-font {
   font-family: var(--font-space-mono), sans-serif;
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar - Vertical scroll */
 .custom-scrollbar::-webkit-scrollbar {
   width: 17px;
 }
@@ -48,4 +43,38 @@ h2 {
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: rgb(255, 247, 159);
+}
+
+/* Custom Scrollbar - Horizontal scroll */
+.custom-x-scrollbar::-webkit-scrollbar {
+  height: 10px;
+}
+
+.custom-x-scrollbar::-webkit-scrollbar-track {
+  background: linear-gradient(
+    to bottom,
+    rgb(255, 193, 255),
+    rgb(255, 236, 201)
+  );
+  border-radius: 10px;
+}
+
+.custom-x-scrollbar::-webkit-scrollbar-thumb {
+  background: rgb(236, 167, 255);
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.custom-x-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 247, 159);
+}
+
+/* Hide scrollbar */
+.scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
 }

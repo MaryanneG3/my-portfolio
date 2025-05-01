@@ -5,23 +5,26 @@ export default function About() {
   const { title, sublinks } = aboutContent;
 
   return (
-    <div className="h-full w-full bg-[url('/images/background/ocean-bg-light.png')] bg-fill bg-center bg-no-repeat">
-      <div className="relative z-10 flex flex-row justify-around items-center h-full w-full bg-gradient-to-b from-purple-50/20 to-purple-500/20">
-        <div className="flex flex-col justify-center items-center h-full">
-          <Sidebar />
-        </div>
-        <div className="flex flex-col justify-center items-center h-full w-[70%] p-10">
-          <div className="flex flex-col justify-center items-center w-full h-full rounded-lg shadow-lg p-10 bg-white/40">
+    <div className="h-full w-full bg-[url('/images/background/ocean-bg-light.png')] bg-fill bg-center bg-cover bg-no-repeat">
+      <div className="relative z-10 flex flex-col lg:flex-row justify-around items-center h-full w-full bg-gradient-to-b from-purple-50/20 to-purple-500/20">
+        <Sidebar />
+
+        <div className="flex flex-col justify-center md:justify-center lg:justify-start items-center h-full w-full lg:w-[70%] p-4">
+          <div className="flex flex-col justify-center items-center w-full h-full rounded-lg shadow-lg py-6 px-4 md:px-8 bg-white/30">
             <div className="flex flex-col justify-between items-start w-full h-full gap-15 pr-10 custom-scrollbar overflow-y-scroll">
               <div className="w-full h-full min-h-full flex flex-col justify-between items-start gap-10 p-5">
-                <h2 className="text-2xl font-bold">{title}</h2>
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold">
+                  {title}
+                </h1>
                 {sublinks?.map((link, index) => (
                   <div
                     key={index}
                     id={link.label.toLowerCase().replace(/\s+/g, "-")}
                     className="flex flex-col justify-start items-start gap-10 pl-10 h-full min-h-full w-full"
                   >
-                    <h2>{link.label}</h2>
+                    <h2 className="text-xl md:text-2xl lg:text-3xl font-bold">
+                      {link.label}
+                    </h2>
                     {link.description &&
                       link.description.map((para, index) => (
                         <p key={index} className="text-xl leading-[1.55]">
