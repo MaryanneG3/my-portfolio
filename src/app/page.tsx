@@ -16,7 +16,7 @@ function Home() {
   const [hoveredLinkIndex, setHoveredLinkIndex] = useAtom(hoveredLinkIndexAtom);
 
   return (
-    <div className="flex flex-col justify-center items-center h-full w-full">
+    <div className="flex flex-row lg:flex-col justify-center items-center h-full w-full">
       <video
         className="absolute top-0 left-0 w-full h-full object-fill z-0"
         src="/videos/light-bg-enhanced.mp4"
@@ -26,41 +26,42 @@ function Home() {
         playsInline
       />
 
-      <main className="relative z-10 flex flex-row items-center justify-evenly w-full h-full bg-gradient-to-b from-purple-50/20 to-purple-500/20">
-        <div
-          className="h-full w-[30%]"
-          onMouseOver={() => {
-            setShowDetails(true);
-          }}
-        >
-          <ProfileCard variant="landing-page" />
-        </div>
+      <main className="relative z-10 flex flex-col md:flex-col lg:flex-row items-center justify-start lg:justify-evenly w-full h-full bg-gradient-to-b from-purple-50/20 to-purple-500/20">
+        {!showDetails && (
+          <div
+            className="h-full w-full lg:w-[30%]"
+            onClick={() => setShowDetails(true)}
+            onMouseOver={() => setShowDetails(true)}
+          >
+            <ProfileCard variant="landing-page" />
+          </div>
+        )}
 
         {showDetails && (
-          <div className="flex flex-col justify-evenly items-center w-[70%] h-full pb-20 pt-10 bg-purple-50/20">
+          <div className="flex flex-col justify-evenly items-center w-full md:w-full lg:w-[70%] h-[80%] lg:h-full pb-20 pt-10 bg-purple-50/20">
             <motion.div
-              className="flex flex-col justify-center items-center w-[85%] h-[50%] text-center text-2xl text-purple-950"
+              className="flex flex-col justify-center items-center w-[85%] h-[50%] text-center text-lg md:text-xl lg:text-2xl text-purple-950"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut" }}
             >
               <motion.h2
-                className="text-5xl"
+                className="text-2xl md:text-3xl lg:text-4xl pb-10"
                 initial={{ opacity: 0, z: 50 }}
                 animate={{ opacity: 1, z: 0 }}
                 transition={{ duration: 1, ease: "easeOut" }}
               >
                 Welcome to my website!
               </motion.h2>
-              <br />
-              <p>{personalDetails.description}</p>
-              <br />
-              <br />
-              <br />
+
+              <p className="pb-10">{personalDetails.description}</p>
+
               <p>To learn more about me, click on one of the buttons below.</p>
             </motion.div>
+
+            {/* Navigation buttons */}
             <motion.div
-              className="flex flex-row justify-around items-center w-full h-[50%] gap-10 py-5 px-20"
+              className="flex flex-col lg:flex-row justify-between items-center w-full h-[50%] gap-10 pt-15 px-20"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeIn", delay: 0.2 }}
@@ -69,7 +70,7 @@ function Home() {
                 <Link
                   key={link.key}
                   href={link.href}
-                  className="flex flex-col justify-center items-center w-[50%] py-5 min-h-[30%] rounded-3xl text-white hover:text-purple-950 hover:shadow-xl hover:shadow-pink-200/20 hover:bg-gradient-to-b hover:from-purple-900/10 hover:to-yellow-100/70 bg-purple-900/20"
+                  className="flex flex-col justify-center items-center w-full lg:w-[50%] py-5 min-h-[30%] rounded-3xl text-white hover:text-purple-950 hover:shadow-xl hover:shadow-pink-200/20 hover:bg-gradient-to-b hover:from-purple-900/10 hover:to-yellow-100/70 bg-purple-900/20"
                   onMouseOver={() => setHoveredLinkIndex(index)}
                   onMouseLeave={() => setHoveredLinkIndex(null)}
                 >
@@ -86,12 +87,12 @@ function Home() {
                           .toLowerCase()
                           .split(" ")
                           .join("-")}.png`}
-                        width={300}
-                        height={300}
+                        width={280}
+                        height={280}
                       />
                     </motion.div>
                   )}
-                  <p className="text-center text-2xl links-font">
+                  <p className="text-center text-lg md:text-xl lg:text-2xl links-font">
                     {link.title}
                   </p>
                 </Link>
