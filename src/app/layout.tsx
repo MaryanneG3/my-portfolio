@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${dmSansFont.variable} ${spaceMonoFont.variable} ${spaceGroteskFont.variable} antialiased w-screen h-screen max-w-screen max-h-screen`}
+        className={`${dmSansFont.variable} ${spaceMonoFont.variable} ${spaceGroteskFont.variable} antialiased w-screen h-screen max-w-screen`}
       >
         {children}
       </body>
