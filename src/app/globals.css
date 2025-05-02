@@ -45,9 +45,16 @@ h1 {
   background: rgb(255, 247, 159);
 }
 
+/* scrollbar for smaller screens */
+@media (max-width: 640px) {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 9px;
+  }
+}
+
 /* Custom Scrollbar - Horizontal scroll */
 .custom-x-scrollbar::-webkit-scrollbar {
-  height: 10px;
+  height: 5px;
 }
 
 .custom-x-scrollbar::-webkit-scrollbar-track {
