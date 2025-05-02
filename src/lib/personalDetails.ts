@@ -11,7 +11,7 @@ export const personalDetails: {
 } = {
   name: "Maryanne Galo",
   title: "Full Stack Developer",
-  description: `I'm Maryanne, a passionate full-stack developer with a knack for creating dynamic and responsive web applications. I thrive on challenges and love to learn new technologies.`,
+  description: `I'm Maryanne, a passionate full-stack developer with a knack for creating dynamic and responsive web applications.`,
   profilePicture: "profile-image.jpg",
   email: "maryanne_galo@outlook.com",
   phone: "+64 027 378 5934",
