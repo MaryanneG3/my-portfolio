@@ -20,8 +20,13 @@ const Sidebar = () => {
   return (
     <>
       {/* header - for small screens */}
-      <div className="flex w-full lg:hidden bg-gradient-to-b from-yellow-100/30 to-purple-400/30">
-        <div className="flex items-center h-16 justify-evenly w-full">
+      <motion.div
+        className="flex w-full lg:hidden shadow-md shadow-purple-700/10 bg-white/80"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.2, ease: "easeIn" }}
+      >
+        <div className="flex items-center h-15 justify-evenly w-full">
           {navigationLinks.map((link) => (
             <button
               key={link.key}
@@ -41,7 +46,7 @@ const Sidebar = () => {
             </button>
           ))}
         </div>
-      </div>
+      </motion.div>
 
       {/* sidebar - for medium and large screens */}
       <motion.div
@@ -59,7 +64,7 @@ const Sidebar = () => {
           {navigationLinks.map((link) => (
             <div key={link.key}>
               <button
-                className="w-full h-10 text-left text-xl font-semibold text-purple-900 hover:cursor-pointer"
+                className="w-full min-w-[15vw] px-5 h-10 text-left text-xl font-semibold text-purple-900 rounded-xl hover:cursor-pointer hover:bg-white/30"
                 onClick={() => {
                   if (!link.sublinks || link.sublinks.length === 0) {
                     router.push(link.href);
