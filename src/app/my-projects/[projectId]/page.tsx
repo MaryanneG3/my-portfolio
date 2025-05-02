@@ -1,14 +1,11 @@
+"use client";
+
 import { projectContent } from "@/lib/projectDetails";
 import { notFound } from "next/navigation";
+import { useParams } from "next/navigation";
 
-type PageProps = {
-  params: {
-    projectId: string;
-  };
-};
-
-export default function ProjectPage({ params }: PageProps) {
-  const { projectId } = params;
+export default function ProjectPage() {
+  const { projectId } = useParams() as { projectId: string };
 
   const project = projectContent.clients
     .flatMap((client) => client.projects || [])
