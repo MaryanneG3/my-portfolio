@@ -18,17 +18,17 @@ export default function About() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          <div className="flex flex-col justify-center items-center w-full h-full rounded-lg shadow-lg py-4 lg:py-6 px-4 md:px-8 bg-white/30">
-            <div className="flex flex-col justify-between items-start w-full h-full gap-15 pr-4 md:pr-8 lg:pr-9 custom-scrollbar overflow-y-scroll">
-              <div className="w-full h-full min-h-full flex flex-col justify-between items-start pl-5 gap-10">
-                <h1 className="text-2xl md:text-2xl lg:text-3xl font-semibold">
+          <div className="flex flex-col justify-center items-center w-full h-full rounded-lg shadow-lg py-4 lg:py-6 pl-2 pr-4 md:px-8 bg-white/30">
+            <div className="flex flex-col items-start w-full max-h-[85vh] overflow-y-auto pr-4 md:pr-8 lg:pr-9 custom-scrollbar">
+              <div className="w-full flex flex-col items-start pl-2 lg:pl-5 gap-10">
+                <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold">
                   {title}
                 </h1>
                 {sublinks?.map((link, index) => (
                   <div
                     key={index}
                     id={link.label.toLowerCase().replace(/\s+/g, "-")}
-                    className="flex flex-col justify-start items-start gap-10 pl-2 md:pl-8 lg:pl-10 h-full min-h-full w-full"
+                    className="flex flex-col justify-start items-start gap-6 lg:gap-10 pl-2 md:pl-8 lg:pl-10 h-full w-full"
                   >
                     <h2 className="text-lg md:text-xl lg:text-2xl font-bold">
                       {link.label}
@@ -52,19 +52,19 @@ export default function About() {
                           <h3 className="text-sm md:text-md lg:text-lg font-semibold mb-4">
                             {cert.title}
                           </h3>
-                          <div className="text-sm md:text-md lg:text-lg flex flex-row justify-between items-start w-full">
-                            <div className="flex flex-col justify-start items-start gap-1 w-[70%]">
+                          <div className="text-sm md:text-md lg:text-lg flex flex-col lg:flex-row justify-between gap-2 lg:gap-0 items-start w-full">
+                            <div className="flex flex-col justify-start items-start gap-1 w-full lg:w-[70%]">
                               <p>{cert.institute}</p>
                               <p>
                                 {cert.startdate} – {cert.enddate}
                               </p>
                             </div>
-                            <div className="text-sm md:text-md lg:text-lg flex flex-col justify-center items-end w-[30%]">
+                            <div className="text-sm md:text-md lg:text-lg flex flex-col justify-center lg:items-end items-start w-full lg:w-[30%]">
                               {cert.certificateLink && (
                                 <a
                                   href={cert.certificateLink}
                                   target="_blank"
-                                  className="text-blue-800 underline"
+                                  className="text-blue-800 underline text-sm md:text-md lg:text-lg"
                                 >
                                   View Certificate
                                 </a>
@@ -80,7 +80,7 @@ export default function About() {
                           key={idx}
                           className="flex flex-col justify-between items-start gap-10 text-sm md:text-md lg:text-lg"
                         >
-                          <h3 className="text-lg lg:text-xl font-semibold">
+                          <h3 className="text-md lg:text-xl font-semibold">
                             {job.title}
                           </h3>
                           <div>
