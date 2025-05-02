@@ -3,6 +3,11 @@ import { projectContent } from "./projectDetails";
 
 export const navigationLinks = [
   {
+    key: "home",
+    title: "Home",
+    href: "/",
+  },
+  {
     key: "about",
     title: "About me",
     href: "/about-me",
