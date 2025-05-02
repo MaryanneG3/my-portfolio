@@ -61,14 +61,14 @@ function Projects() {
                 </div>
 
                 {/* Project Cards */}
-                <div className="flex flex-row justify-start items-start gap-6 overflow-x-scroll lg:overflow-x-none scrollbar-hide">
+                <div className="flex flex-row justify-start items-start w-full gap-6 overflow-x-scroll lg:overflow-x-none scrollbar-hide">
                   {currentClient.projects?.map((project, index) => (
                     <Link
                       key={index}
                       href={`/my-projects/${project.href}`}
                       className="hover:cursor-pointer"
                     >
-                      <div className="w-full min-w-full md:w-[24rem] md:min-w-[24rem] lg:w-[28rem] lg:min-w-[28rem] p-5 flex flex-col gap-4 rounded-3xl text-purple-950 hover:shadow-xl hover:shadow-pink-200/20 hover:bg-gradient-to-b hover:from-purple-900/10 hover:to-yellow-100/70 bg-purple-900/20 transition">
+                      <div className="w-full flex-shrink-0 min-w-[17rem] md:w-[24rem] md:min-w-[24rem] lg:w-[28rem] lg:min-w-[28rem] p-5 flex flex-col gap-4 rounded-3xl text-purple-950 hover:shadow-xl hover:shadow-pink-200/20 hover:bg-gradient-to-b hover:from-purple-900/10 hover:to-yellow-100/70 bg-purple-900/20 transition">
                         <div>
                           <h3 className="text-md md:text-lg lg:text-2xl font-bold">
                             {project.client}
