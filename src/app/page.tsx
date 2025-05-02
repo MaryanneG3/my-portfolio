@@ -29,7 +29,7 @@ function Home() {
       <main className="relative z-10 flex flex-col md:flex-col lg:flex-row items-center justify-start lg:justify-evenly w-full h-full bg-gradient-to-b from-purple-50/20 to-purple-500/20">
         {!showDetails && (
           <div
-            className="h-full w-full lg:w-[30%]"
+            className="h-full w-full lg:w-[20%]"
             onClick={() => setShowDetails(true)}
             onMouseOver={() => setShowDetails(true)}
           >
@@ -38,7 +38,7 @@ function Home() {
         )}
 
         {showDetails && (
-          <div className="flex flex-col justify-evenly items-center w-full md:w-full lg:w-[70%] h-[80%] lg:h-full pb-20 pt-10 bg-purple-50/20">
+          <div className="flex flex-col justify-between items-center w-full md:w-full lg:w-[80%] h-full bg-purple-50/10">
             <motion.div
               className="flex flex-col justify-center items-center w-[85%] h-[50%] text-center text-lg md:text-xl lg:text-2xl text-purple-950"
               initial={{ opacity: 0, y: 50 }}
@@ -46,7 +46,7 @@ function Home() {
               transition={{ duration: 1, ease: "easeOut" }}
             >
               <motion.h2
-                className="text-2xl md:text-3xl lg:text-4xl pb-10"
+                className="text-3xl md:text-4xl lg:text-5xl pb-10"
                 initial={{ opacity: 0, z: 50 }}
                 animate={{ opacity: 1, z: 0 }}
                 transition={{ duration: 1, ease: "easeOut" }}
@@ -61,7 +61,7 @@ function Home() {
 
             {/* Navigation buttons */}
             <motion.div
-              className="flex flex-col lg:flex-row justify-between items-center w-full h-[50%] gap-10 pt-15 px-20"
+              className="flex flex-col lg:flex-row justify-around items-center w-full h-[60%] gap-5 lg:gap-10 px-20"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeIn", delay: 0.2 }}
@@ -70,27 +70,29 @@ function Home() {
                 <Link
                   key={link.key}
                   href={link.href}
-                  className="flex flex-col justify-center items-center w-full lg:w-[50%] py-5 min-h-[30%] rounded-3xl text-white hover:text-purple-950 hover:shadow-xl hover:shadow-pink-200/20 hover:bg-gradient-to-b hover:from-purple-900/10 hover:to-yellow-100/70 bg-purple-900/20"
+                  className="flex flex-col justify-center items-center w-full lg:w-[50%] py-5 min-h-[10%] lg:min-h-[30%] rounded-3xl text-white hover:text-purple-950 hover:shadow-xl hover:shadow-pink-200/20 hover:bg-gradient-to-b hover:from-purple-900/10 hover:to-yellow-100/70 bg-purple-900/20"
                   onMouseOver={() => setHoveredLinkIndex(index)}
                   onMouseLeave={() => setHoveredLinkIndex(null)}
                 >
                   {hoveredLinkIndex === index && (
-                    <motion.div
-                      className="items-center"
-                      initial={{ opacity: 0, y: 60 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, ease: "easeOut" }}
-                    >
-                      <Image
-                        alt={link.title}
-                        src={`/images/background/${link.title
-                          .toLowerCase()
-                          .split(" ")
-                          .join("-")}.png`}
-                        width={280}
-                        height={280}
-                      />
-                    </motion.div>
+                    <div className="hidden md:flex items-center">
+                      <motion.div
+                        className="items-center"
+                        initial={{ opacity: 0, y: 60 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
+                      >
+                        <Image
+                          alt={link.title}
+                          src={`/images/icons/${link.title
+                            .toLowerCase()
+                            .split(" ")
+                            .join("-")}.png`}
+                          width={280}
+                          height={280}
+                        />
+                      </motion.div>
+                    </div>
                   )}
                   <p className="text-center text-lg md:text-xl lg:text-2xl links-font">
                     {link.title}
