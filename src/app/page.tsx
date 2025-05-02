@@ -18,7 +18,7 @@ function Home() {
   return (
     <div className="flex flex-row lg:flex-col justify-center items-center h-full w-full">
       <video
-        className="absolute top-0 left-0 w-full h-full object-fill z-0"
+        className="fixed top-0 left-0 w-full h-full object-cover z-0 pointer-events-none select-none"
         src="/videos/light-bg-enhanced.mp4"
         autoPlay
         loop
@@ -38,15 +38,15 @@ function Home() {
         )}
 
         {showDetails && (
-          <div className="flex flex-col justify-between items-center w-full md:w-full lg:w-[80%] h-full bg-purple-50/10">
+          <div className="flex flex-col justify-evenly pt-5 items-center w-full md:w-full lg:w-[80%] h-full bg-purple-50/10">
             <motion.div
-              className="flex flex-col justify-center items-center w-[85%] h-[50%] text-center text-lg md:text-xl lg:text-2xl text-purple-950"
+              className="flex flex-col justify-center items-center w-[85%] lg:w-[70%] h-[55%] lg:h-[40%] text-center text-lg md:text-xl lg:text-2xl text-purple-950"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut" }}
             >
               <motion.h2
-                className="text-3xl md:text-4xl lg:text-5xl pb-10"
+                className="text-3xl md:text-4xl lg:text-5xl pb-4 lg:pb-10"
                 initial={{ opacity: 0, z: 50 }}
                 animate={{ opacity: 1, z: 0 }}
                 transition={{ duration: 1, ease: "easeOut" }}
@@ -54,14 +54,14 @@ function Home() {
                 Welcome to my website!
               </motion.h2>
 
-              <p className="pb-10">{personalDetails.description}</p>
+              <p className="pb-6 lg:pb-10">{personalDetails.description}</p>
 
               <p>To learn more about me, click on one of the buttons below.</p>
             </motion.div>
 
             {/* Navigation buttons */}
             <motion.div
-              className="flex flex-col lg:flex-row justify-around items-center w-full h-[60%] gap-5 lg:gap-10 px-20"
+              className="flex flex-col lg:flex-row justify-center lg:justify-around items-center w-full h-[45%] lg:h-[60%] gap-5 lg:gap-10 px-20"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeIn", delay: 0.2 }}
@@ -70,7 +70,7 @@ function Home() {
                 <Link
                   key={link.key}
                   href={link.href}
-                  className="flex flex-col justify-center items-center w-full lg:w-[50%] py-5 min-h-[10%] lg:min-h-[30%] rounded-3xl text-white hover:text-purple-950 hover:shadow-xl hover:shadow-pink-200/20 hover:bg-gradient-to-b hover:from-purple-900/10 hover:to-yellow-100/70 bg-purple-900/20"
+                  className="flex flex-col justify-center items-center w-full lg:w-[50%] py-5 h-[30px] lg:h-auto lg:min-h-[20%] rounded-3xl text-white hover:text-purple-950 hover:shadow-xl hover:shadow-pink-200/20 hover:bg-gradient-to-b hover:from-purple-900/10 hover:to-yellow-100/70 bg-purple-900/20"
                   onMouseOver={() => setHoveredLinkIndex(index)}
                   onMouseLeave={() => setHoveredLinkIndex(null)}
                 >
