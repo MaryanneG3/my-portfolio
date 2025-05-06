@@ -21,27 +21,34 @@ const Sidebar = () => {
     <>
       {/* header - for small screens */}
       <motion.div
-        className="flex w-full lg:hidden shadow-md shadow-purple-700/10 bg-white/80"
+        className="flex lg:hidden shadow-md shadow-purple-100/10 w-full h-14 bg-white"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.2, ease: "easeIn" }}
       >
-        <div className="flex items-center h-15 justify-evenly w-full">
+        <div className="flex items-center justify-evenly w-full h-full">
           {navigationLinks.map((link) => (
             <button
               key={link.key}
               onClick={() => router.push(link.href)}
-              className="flex flex-col items-center rounded-xl px-5 pb-2 text-purple-900 hover:text-purple-700 hover:bg-gradient-to-b hover:from-purple-900/10 hover:to-yellow-100/70"
+              className={`flex flex-col md:flex-row items-center justify-center rounded-xl h-[80%] w-[20%] relative text-purple-900
+                ${
+                  pathname === link.href
+                    ? "border border-purple-500/20 bg-pink-200/20"
+                    : ""
+                }
+              `}
             >
-              <Image
-                alt={link.title}
-                src={`/images/icons/${link.title
-                  .toLowerCase()
-                  .split(" ")
-                  .join("-")}.png`}
-                width={45}
-                height={45}
-              />
+              <div className="relative w-12 h-12 border-none md:border md:border-r-2">
+                <Image
+                  alt={link.title}
+                  src={`/images/icons/${link.title
+                    .toLowerCase()
+                    .split(" ")
+                    .join("-")}.png`}
+                  fill
+                />
+              </div>
               <span className="text-xs hidden md:block">{link.title}</span>
             </button>
           ))}
@@ -50,7 +57,7 @@ const Sidebar = () => {
 
       {/* sidebar - for medium and large screens */}
       <motion.div
-        className="hidden lg:flex w-[380px] h-full flex-col justify-between items-center gap-5 py-10 bg-gradient-to-b from-purple-900/10 via-purple-900/10 to-yellow-100/70"
+        className="hidden lg:flex w-[380px] h-full flex-col justify-between items-center gap-5 py-10 bg-gradient-to-b from-purple-300 via-yellow-50 to-yellow-100"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
@@ -64,7 +71,7 @@ const Sidebar = () => {
           {navigationLinks.map((link) => (
             <div key={link.key}>
               <button
-                className="w-full min-w-[15vw] px-5 h-10 text-left text-xl font-semibold text-purple-900 rounded-xl hover:cursor-pointer hover:bg-white/30"
+                className="w-full min-w-[15vw] px-5 h-10 text-left text-xl font-semibold text-purple-900 rounded-xl hover:cursor-pointer hover:bg-white"
                 onClick={() => {
                   if (!link.sublinks || link.sublinks.length === 0) {
                     router.push(link.href);
@@ -101,7 +108,7 @@ const Sidebar = () => {
                             router.push(targetUrl);
                           }
                         }}
-                        className="flex items-center w-full px-5 py-2 text-lg text-left text-purple-800 cursor-pointer transition-colors duration-200 hover:rounded-lg hover:font-bold hover:bg-purple-50/30"
+                        className="flex items-center w-full px-5 py-2 text-lg text-left text-purple-800 cursor-pointer transition-colors duration-200 hover:rounded-lg hover:font-bold hover:bg-white"
                       >
                         {sublink.label}
                       </button>
