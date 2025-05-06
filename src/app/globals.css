@@ -1,23 +1,15 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-space-grotesk), sans-serif;
-}
-
-h1 {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: var(--font-dm-sans), sans-serif;
 }
 
 .links-font {
-  font-family: var(--font-space-mono), sans-serif;
+  font-family: var(--font-space-mono), monospace;
+}
+
+h1 {
+  font-family: "Trebuchet MS", var(--font-space-grotesk), sans-serif;
 }
 
 /* Custom Scrollbar - Vertical scroll */
