@@ -57,7 +57,7 @@ const Sidebar = () => {
 
       {/* sidebar - for medium and large screens */}
       <motion.div
-        className="hidden lg:flex w-[380px] h-full flex-col justify-between items-center gap-5 py-10 bg-gradient-to-b from-purple-300 via-yellow-50 to-yellow-100"
+        className="hidden lg:flex w-[380px] h-full flex-col justify-between items-center gap-5 py-10 bg-white"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
@@ -71,7 +71,7 @@ const Sidebar = () => {
           {navigationLinks.map((link) => (
             <div key={link.key}>
               <button
-                className="w-full min-w-[15vw] px-5 h-10 text-left text-xl font-semibold text-purple-900 rounded-xl hover:cursor-pointer hover:bg-white"
+                className="w-full min-w-[15vw] px-5 h-10 text-left text-xl font-semibold text-purple-900 rounded-xl hover:cursor-pointer hover:bg-purple-900/20"
                 onClick={() => {
                   if (!link.sublinks || link.sublinks.length === 0) {
                     router.push(link.href);
@@ -108,7 +108,7 @@ const Sidebar = () => {
                             router.push(targetUrl);
                           }
                         }}
-                        className="flex items-center w-full px-5 py-2 text-lg text-left text-purple-800 cursor-pointer transition-colors duration-200 hover:rounded-lg hover:font-bold hover:bg-white"
+                        className="flex items-center w-full px-5 py-2 text-lg text-left text-purple-800 cursor-pointer transition-colors duration-200 hover:rounded-lg hover:font-bold hover:bg-purple-200/60"
                       >
                         {sublink.label}
                       </button>
