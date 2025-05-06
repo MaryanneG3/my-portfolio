@@ -30,8 +30,16 @@ function Projects() {
   };
 
   return (
-    <div className="h-full w-full bg-[url('/images/background/ocean-bg-light.png')] bg-fill bg-center bg-cover bg-no-repeat lg:bg-none">
-      <div className="relative z-10 flex flex-col lg:flex-row justify-between items-center h-full w-full bg-gradient-to-b from-purple-50/80 to-purple-500/30 lg:bg-none">
+    <div className="h-full w-full">
+      <video
+        className="fixed top-0 left-0 w-full h-full object-cover z-0 pointer-events-none select-none"
+        src="/videos/light-bg-enhanced.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
+      <div className="relative z-10 flex flex-col lg:flex-row justify-between items-center h-full w-full bg-gradient-to-b from-purple-50/70 to-purple-500/30 lg:from-purple-50/50 lg:to-purple-500/20">
         <Sidebar />
 
         <motion.div
@@ -68,7 +76,7 @@ function Projects() {
                       href={`/my-projects/${project.href}`}
                       className="hover:cursor-pointer"
                     >
-                      <div className="w-full flex-shrink-0 min-w-[15rem] md:w-[24rem] md:min-w-[24rem] lg:w-[28rem] lg:min-w-[28rem] p-4 flex flex-col gap-4 rounded-3xl text-purple-950 hover:shadow-xl hover:shadow-pink-200/20 hover:bg-gradient-to-b hover:from-purple-700/30 hover:to-yellow-100/80 bg-purple-950/20 lg:bg-purple-200 transition">
+                      <div className="w-full flex-shrink-0 min-w-[15rem] md:w-[24rem] md:min-w-[24rem] lg:w-[28rem] lg:min-w-[28rem] p-4 flex flex-col gap-4 rounded-3xl text-purple-950 hover:shadow-xl hover:shadow-pink-200/20 hover:bg-gradient-to-b hover:from-purple-700/30 hover:to-yellow-100/80 bg-purple-950/20 transition">
                         <div>
                           <h3 className="text-sm md:text-lg lg:text-2xl font-bold">
                             {project.client}
@@ -103,13 +111,13 @@ function Projects() {
               <div className="flex flex-row justify-between w-full gap-4 mt-3">
                 <button
                   onClick={handlePrevious}
-                  className="px-5 py-2 lg:py-3 text-sm rounded hover:cursor-pointer border-2 border-purple-200 bg-purple-100 hover:bg-purple-600/20"
+                  className="px-5 py-2 lg:py-3 text-sm rounded hover:cursor-pointer border-2 border-purple-200 bg-purple-100 hover:border-yellow-50 hover:bg-yellow-100"
                 >
                   Previous
                 </button>
                 <button
                   onClick={handleNext}
-                  className="px-5 py-2 lg:py-3 text-sm rounded hover:cursor-pointer border-2 border-purple-200 bg-purple-100 hover:bg-purple-600/20"
+                  className="px-5 py-2 lg:py-3 text-sm rounded hover:cursor-pointer border-2 border-purple-200 bg-purple-100 hover:border-yellow-50 hover:bg-yellow-100"
                 >
                   Next
                 </button>

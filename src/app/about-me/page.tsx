@@ -8,8 +8,16 @@ export default function About() {
   const { title, sublinks } = aboutContent;
 
   return (
-    <div className="h-full w-full bg-[url('/images/background/ocean-bg-light.png')] bg-fill bg-center bg-cover bg-no-repeat lg:bg-none">
-      <div className="relative z-10 flex flex-col lg:flex-row justify-between items-center h-full w-full bg-gradient-to-b from-purple-50/80 to-purple-500/30 lg:bg-none">
+    <div className="h-full w-full">
+      <video
+        className="fixed top-0 left-0 w-full h-full object-cover z-0 pointer-events-none select-none"
+        src="/videos/light-bg-enhanced.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
+      <div className="relative z-10 flex flex-col lg:flex-row justify-between items-center h-full w-full bg-gradient-to-b from-purple-50/70 to-purple-500/30 lg:from-purple-50/50 lg:to-purple-500/20">
         <Sidebar />
 
         <motion.div
