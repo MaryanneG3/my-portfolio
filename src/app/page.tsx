@@ -38,7 +38,7 @@ function Home() {
         )}
 
         {showDetails && (
-          <div className="flex flex-col justify-evenly pt-5 items-center w-full md:w-full lg:w-[80%] h-full bg-purple-50/10">
+          <div className="flex flex-col justify-evenly pt-5 items-center w-full md:w-full lg:w-[80%] h-full">
             <motion.div
               className="flex flex-col justify-center items-center w-[85%] lg:w-[70%] h-[55%] lg:h-[40%] text-center text-lg md:text-xl lg:text-2xl text-purple-950"
               initial={{ opacity: 0, y: 50 }}
@@ -75,7 +75,7 @@ function Home() {
                   onMouseLeave={() => setHoveredLinkIndex(null)}
                 >
                   {hoveredLinkIndex === index && (
-                    <div className="hidden md:flex items-center">
+                    <div className="hidden lg:flex items-center">
                       <motion.div
                         className="items-center"
                         initial={{ opacity: 0, y: 60 }}
