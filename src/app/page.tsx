@@ -70,7 +70,7 @@ function Home() {
                 <Link
                   key={link.key}
                   href={link.href}
-                  className="flex flex-col justify-center items-center w-full lg:w-[50%] py-5 h-[30px] lg:h-auto lg:min-h-[20%] rounded-3xl text-white hover:text-purple-950 hover:shadow-xl hover:shadow-pink-200/20 hover:bg-yellow-100/50 bg-purple-900/20"
+                  className="flex flex-col justify-center items-center w-full lg:w-[50%] py-5 h-[30px] lg:h-auto lg:min-h-[20%] rounded-3xl text-white hover:text-purple-950 hover:shadow-xl hover:shadow-yellow-200/20 lg:hover:bg-gradient-to-b lg:hover:from-purple-900/50 lg:hover:via-purple-900/20 lg:hover:to-yellow-100/70 hover:bg-amber-100/40 bg-purple-900/20"
                   onMouseOver={() => setHoveredLinkIndex(index)}
                   onMouseLeave={() => setHoveredLinkIndex(null)}
                 >
