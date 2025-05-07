@@ -70,7 +70,7 @@ function Home() {
                 <Link
                   key={link.key}
                   href={link.href}
-                  className="flex flex-col justify-center items-center w-full lg:w-[50%] py-5 h-[30px] lg:h-auto lg:min-h-[20%] rounded-3xl text-white hover:text-purple-950 hover:shadow-xl hover:shadow-pink-200/20 hover:bg-gradient-to-b hover:from-purple-900/10 hover:to-yellow-100/70 bg-purple-900/20"
+                  className="flex flex-col justify-center items-center w-full lg:w-[50%] py-5 h-[30px] lg:h-auto lg:min-h-[20%] rounded-3xl text-white hover:text-purple-950 hover:shadow-xl hover:shadow-pink-200/20 hover:bg-yellow-100/50 bg-purple-900/20"
                   onMouseOver={() => setHoveredLinkIndex(index)}
                   onMouseLeave={() => setHoveredLinkIndex(null)}
                 >
@@ -90,6 +90,7 @@ function Home() {
                             .join("-")}.png`}
                           width={280}
                           height={280}
+                          sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 15vw"
                         />
                       </motion.div>
                     </div>
