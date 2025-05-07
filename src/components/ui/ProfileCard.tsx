@@ -24,6 +24,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ variant }) => {
                 src={`/images/profile-pic/${personalDetails.profilePicture}`}
                 fill
                 style={{ objectFit: "cover" }}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </motion.div>
             <motion.div
@@ -51,6 +52,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ variant }) => {
               src={`/images/profile-pic/${personalDetails.profilePicture}`}
               fill
               style={{ objectFit: "cover" }}
+              sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 15vw"
             />
           </motion.div>
           <motion.div
