@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
     const emailContent: MailDataRequired = {
       to: "maryanne.galo.readonly@gmail.com",
       from: process.env.VERIFIED_SENDER_EMAIL!,
-      subject: `Portoflio Website Contact: Message from ${name}`,
+      subject: `Portfolio Website Contact: Message from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
       html: `
         <div style="font-family: Arial, sans-serif; padding: 20px; border: 1px solid #e0e0e0; border-radius: 5px;">
