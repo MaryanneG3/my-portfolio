@@ -73,7 +73,7 @@ export default function Contact() {
         >
           <div className="flex flex-col items-start w-full max-h-[85vh] lg:max-h-[92vh] overflow-y-auto pr-4 md:pr-8 lg:pr-9 custom-scrollbar">
             <div className="flex flex-col justify-start items-center w-full h-full py-2 gap-5 lg:gap-10 lg:py-6 pl-2 pr-4 md:px-8">
-              <div className="flex flex-col items-start justify-around w-full gap-10 pr-4 md:pr-8 lg:pr-9">
+              <div className="flex flex-col items-start justify-around w-full gap-10 pr-4 md:pr-8 lg:pr-9 pb-40">
                 <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold text-purple-950">
                   {title}
                 </h1>
