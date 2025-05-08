@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
 
     // Create email content
     const emailContent: MailDataRequired = {
-      to: process.env.EMAIL_RECIPIENT,
+      to: process.env.EMAIL_RECIPIENT!,
       from: process.env.VERIFIED_SENDER_EMAIL!,
       subject: `Portfolio Website Contact: Message from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
