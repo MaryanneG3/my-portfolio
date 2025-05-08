@@ -42,12 +42,11 @@ export async function POST(req: NextRequest) {
 
     // Return success response
     return NextResponse.json({ success: true });
-  } catch (error: any) {
+  } catch (error) {
     console.error("Error sending email:", error);
 
     const errorMessage =
-      error?.response?.body?.errors?.[0]?.message ||
-      "Failed to send email. Please check your internet connection or try again later.";
+      "Failed to send email. Please check your internet connection or email me directly at 'maryanne_galo@outlook.com'.";
 
     return NextResponse.json({ error: errorMessage }, { status: 500 });
   }
