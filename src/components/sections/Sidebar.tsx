@@ -47,6 +47,7 @@ const Sidebar = () => {
                     .split(" ")
                     .join("-")}.png`}
                   fill
+                  sizes="(max-width: 768px) 20vw, (max-width: 1200px) 10vw, 5vw"
                 />
               </div>
               <span className="text-xs hidden md:block">{link.title}</span>
