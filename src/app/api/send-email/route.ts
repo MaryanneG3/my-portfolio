@@ -45,7 +45,9 @@ export async function POST(req: NextRequest) {
   } catch (error) {
     console.error("Error sending email:", error);
 
-    const errorMessage = `Failed to send email. Please check your internet connection or email me directly at '${process.env.EMAIL_RECIPIENT}'.`;
+    const recipient =
+      process.env.EMAIL_RECIPIENT || "maryanne_galo@outlook.com";
+    const errorMessage = `Failed to send email. Please check your internet connection or email me directly at '${recipient}'.`;
 
     return NextResponse.json({ error: errorMessage }, { status: 500 });
   }
