@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import sgMail from "@sendgrid/mail";
+import type { MailDataRequired } from "@sendgrid/mail";
 
 export async function POST(req: NextRequest) {
   try {
@@ -17,9 +18,9 @@ export async function POST(req: NextRequest) {
     sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
 
     // Create email content
-    const emailContent = {
+    const emailContent: MailDataRequired = {
       to: "maryanne.galo.readonly@gmail.com",
-      from: process.env.VERIFIED_SENDER_EMAIL,
+      from: process.env.VERIFIED_SENDER_EMAIL!,
       subject: `Portoflio Website Contact: Message from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
       html: `
@@ -41,13 +42,12 @@ export async function POST(req: NextRequest) {
 
     // Return success response
     return NextResponse.json({ success: true });
-  } catch (error) {
+  } catch (error: any) {
     console.error("Error sending email:", error);
 
-    // Provide more specific error messages when possible
     const errorMessage =
-      error.response?.body?.errors?.[0]?.message ||
-      "Failed to send email. Please check you internet connection or try again later.";
+      error?.response?.body?.errors?.[0]?.message ||
+      "Failed to send email. Please check your internet connection or try again later.";
 
     return NextResponse.json({ error: errorMessage }, { status: 500 });
   }

@@ -44,6 +44,7 @@ export default function Contact() {
         setIsSuccess(false);
       }
     } catch (error) {
+      console.error("Email send error:", error);
       setStatus("Something went wrong. Please try again later.");
       setIsSuccess(false);
     } finally {
@@ -169,6 +170,7 @@ export default function Contact() {
                         {/* Status Message */}
                         {status && (
                           <div
+                            aria-live="polite"
                             className={`mt-2 p-3 rounded-md ${
                               isSuccess
                                 ? "bg-green-50 text-green-800"
