@@ -19,8 +19,8 @@ export async function POST(req: NextRequest) {
 
     // Create email content
     const emailContent: MailDataRequired = {
-      to: "maryanne.galo.readonly@gmail.com",
-      from: process.env.VERIFIED_SENDER_EMAIL!,
+      to: process.env.EMAIL_RECIPIENT || "maryanne.galo.readonly@gmail.com",
+      from: process.env.VERIFIED_SENDER_EMAIL || "maryanne_galo@outlook.com",
       subject: `Portfolio Website Contact: Message from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
       html: `
@@ -45,8 +45,9 @@ export async function POST(req: NextRequest) {
   } catch (error) {
     console.error("Error sending email:", error);
 
-    const errorMessage =
-      "Failed to send email. Please check your internet connection or email me directly at 'maryanne_galo@outlook.com'.";
+    const recipient =
+      process.env.EMAIL_RECIPIENT || "maryanne.galo.readonly@gmail.com";
+    const errorMessage = `Failed to send email. Please check your internet connection or email me directly at '${recipient}'.`;
 
     return NextResponse.json({ error: errorMessage }, { status: 500 });
   }
