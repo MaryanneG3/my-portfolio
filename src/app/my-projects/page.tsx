@@ -49,10 +49,10 @@ function Projects() {
           transition={{ duration: 1, ease: "easeOut" }}
         >
           <div className="flex flex-col justify-between items-center w-full h-full rounded-lg px-4 md:px-8">
-            <div className="flex flex-col justify-between items-start w-full h-full py-4 lg:py-8">
+            <div className="flex flex-col justify-between items-start w-full h-full py-2 md:py-0 lg:py-8">
               {/* Title */}
               <div className="flex justify-center items-center w-full">
-                <h1 className="text-xl md:text-3xl lg:text-4xl font-bold text-purple-950">
+                <h1 className="text-xl md:text-2xl lg:text-4xl font-bold text-purple-950">
                   {title}
                 </h1>
               </div>
@@ -60,7 +60,7 @@ function Projects() {
               {/* Client Description */}
               <div className="w-full h-[85%] flex flex-col justify-evenly gap-5 md:gap-0 py-4 mt-2 lg:mt-4 border-y-2 border-purple-900/20">
                 <div className="flex flex-col gap-2 w-full">
-                  <h2 className="text-lg md:text-2xl lg:text-3xl font-semibold">
+                  <h2 className="text-lg md:text-xl lg:text-3xl font-semibold">
                     {currentClient.name}
                   </h2>
                   <p className="text-sm md:text-base">
@@ -78,14 +78,14 @@ function Projects() {
                     >
                       <div className="w-full flex-shrink-0 min-w-[15rem] md:w-[24rem] md:min-w-[24rem] lg:w-[28rem] lg:min-w-[28rem] p-4 flex flex-col gap-4 rounded-3xl text-purple-950 hover:shadow-xl hover:shadow-pink-200/20 hover:bg-gradient-to-b hover:from-purple-700/30 hover:to-yellow-100/80 bg-purple-950/20 transition">
                         <div>
-                          <h3 className="text-sm md:text-lg lg:text-2xl font-bold">
+                          <h3 className="text-sm md:text-lg lg:text-xl font-bold">
                             {project.client}
                           </h3>
                         </div>
                         <div className="w-full aspect-video">
                           <video
                             className="w-full h-full object-cover rounded-2xl"
-                            src={project.videoSrc}
+                            src={project.poster}
                             autoPlay
                             loop
                             muted
@@ -93,12 +93,15 @@ function Projects() {
                           />
                         </div>
                         <p className="text-sm">
-                          Built using:{" "}
+                          <b>Built using:</b>{" "}
                           {[
                             ...(project.tools.frameworks?.frontend || []),
                             ...(project.tools.libraries?.frontend || []),
                             ...(project.tools.frameworks?.styling || []),
                             ...(project.tools.languages?.styling || []),
+                            ...(project.tools.runtimeEnvironments || []),
+                            ...(project.tools.frameworks?.backend || []),
+                            ...(project.tools.languages?.programming || []),
                           ].join(", ")}
                         </p>
                       </div>
