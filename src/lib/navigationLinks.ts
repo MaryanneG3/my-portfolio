@@ -1,5 +1,5 @@
 import { aboutContent } from "./aboutMe";
-import { projectContent } from "./projectDetails";
+// import { projectContent } from "./projectDetails";
 
 export const navigationLinks = [
   {
@@ -20,10 +20,10 @@ export const navigationLinks = [
     key: "projects",
     title: "My Projects",
     href: "/my-projects",
-    sublinks: projectContent.clients.map((item) => ({
-      label: item.name,
-      href: `#${item.name.toLowerCase().replace(/\s+/g, "-")}`,
-    })),
+    // sublinks: projectContent.clients.map((item) => ({
+    //   label: item.name,
+    //   href: `#${item.name.toLowerCase().replace(/\s+/g, "-")}`,
+    // })),
   },
   {
     key: "contact",
@@ -31,3 +31,5 @@ export const navigationLinks = [
     href: "/my-contacts",
   },
 ];
+
+// to do - fix project sublinks
