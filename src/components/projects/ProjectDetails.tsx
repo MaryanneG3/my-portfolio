@@ -27,7 +27,7 @@ function ProjectDetails() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.1 }}
           className="flex flex-col justify-between items-start gap-8 w-full h-full lg:w-[70%] px-0 lg:px-6 py-8 lg:py-8 lg:rounded-lg lg:border lg:border-purple-300 lg:bg-white/50"
         >
           <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-purple-900">
