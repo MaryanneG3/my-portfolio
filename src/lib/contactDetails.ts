@@ -2,12 +2,12 @@ export const contactContent = {
   title: "My Contact Details",
   content: [
     {
-      label: "Phone number",
-      value: "+64 027 378 5934",
-    },
-    {
       label: "Send me an email",
       value: "maryanne_galo@outlook.com",
+    },
+    {
+      label: "Phone number",
+      value: "+64 027 378 5934",
     },
     {
       label: "GitHub",
