@@ -1,6 +1,7 @@
 import { projectContent } from "@/lib/projectDetails";
 import { notFound } from "next/navigation";
 import { useParams } from "next/navigation";
+import { motion } from "framer-motion";
 
 function ProjectDetails() {
   const { projectId } = useParams() as { projectId: string };
@@ -22,7 +23,13 @@ function ProjectDetails() {
       </div>
 
       <div className="flex flex-col lg:flex-row justify-between items-start w-full h-full gap-10 lg:gap-8">
-        <div className="flex flex-col justify-between items-start gap-8 w-full h-full lg:w-[70%] px-0 lg:px-6 py-8 lg:py-8 lg:rounded-lg lg:border lg:border-purple-300 lg:bg-white/50">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.5 }}
+          className="flex flex-col justify-between items-start gap-8 w-full h-full lg:w-[70%] px-0 lg:px-6 py-8 lg:py-8 lg:rounded-lg lg:border lg:border-purple-300 lg:bg-white/50"
+        >
           <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-purple-900">
             My Responsibilities
           </h2>
@@ -37,9 +44,15 @@ function ProjectDetails() {
                 </div>
               ))}
           </div>
-        </div>
-        <div className="flex flex-col justify-start items-start gap-5 lg:items-end h-full w-[80%] md:w-[40%] lg:w-[30%]">
-          <div className="h-full w-full lg:h-[22rem] flex flex-col justify-start gap-5 rounded-xl p-8 border border-purple-300 bg-white/50">
+        </motion.div>
+        <div className="flex flex-col justify-start items-start gap-5 lg:items-end h-full w-[98%] md:w-[40%] lg:w-[30%]">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.5 }}
+            className="h-full w-full lg:h-[22rem] flex flex-col justify-start gap-5 rounded-xl p-8 border border-purple-300 bg-white/50"
+          >
             <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-purple-900">
               Built using:
             </h2>
@@ -60,9 +73,15 @@ function ProjectDetails() {
                 <li key={index}>{tool}</li>
               ))}
             </ul>
-          </div>
+          </motion.div>
           {(project.gitRepository || project.liveUrl) && (
-            <div className="h-full w-full lg:h-[22rem] flex flex-col justify-start gap-5 rounded-xl p-8 border border-purple-300 bg-white/50">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.5 }}
+              className="h-full w-full lg:h-[22rem] flex flex-col justify-start gap-5 rounded-xl p-8 border border-purple-300 bg-white/50"
+            >
               <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-purple-900">
                 Important Links
               </h2>
@@ -90,7 +109,7 @@ function ProjectDetails() {
                   {project?.liveUrl}
                 </a>
               </div>
-            </div>
+            </motion.div>
           )}
         </div>
       </div>
