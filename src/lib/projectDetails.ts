@@ -138,6 +138,16 @@ export const projectContent: ProjectContent = {
           },
           href: "z-fuel",
           poster: "/videos/projects/mission-ready/z-Fuel.mp4",
+          videoMedia: [
+            {
+              src: "/videos/projects/mission-ready/Z-fuel - Landing Page.mp4",
+              alt: "Z-Fuel Landing Page",
+            },
+            {
+              src: "/videos/projects/mission-ready/Z-fuel - Order Online Page.mp4",
+              alt: "Z-Fuel Order Online Page",
+            },
+          ],
           gitRepository: "https://github.com/MaryanneG3/z-fuel-redesign.git",
           liveUrl: "https://z-fuel-redesign.vercel.app/",
         },
@@ -167,6 +177,16 @@ export const projectContent: ProjectContent = {
           },
           href: "turners-automotive",
           poster: "/videos/projects/mission-ready/Turners.mp4",
+          videoMedia: [
+            {
+              src: "/videos/projects/mission-ready/Turners - Landing Page.mp4",
+              alt: "Turners Landing Page",
+            },
+            {
+              src: "/videos/projects/mission-ready/Turners - Tina the Chatbot.mp4",
+              alt: "Tina the Insurance Recommendation Chatbot",
+            },
+          ],
           gitRepository:
             "https://github.com/MaryanneG3/turners_insurance_recommendation_application.git",
           liveUrl: "https://turners-insurance-recommendation.vercel.app/",
@@ -208,6 +228,12 @@ export const projectContent: ProjectContent = {
           },
           href: "my-portfolio",
           poster: "/videos/projects/personal/Portfolio.mp4",
+          videoMedia: [
+            {
+              src: "/videos/projects/personal/Portfolio.mp4",
+              alt: "My Portfolio Landing Page",
+            },
+          ],
           gitRepository: "https://github.com/MaryanneG3/my-portfolio.git",
           liveUrl: "https://maryanne-galo.vercel.app/",
         },
