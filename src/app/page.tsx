@@ -86,8 +86,8 @@ function Home() {
                         <CldImage
                           src={link.imageURL}
                           alt={link.title}
-                          width="280"
-                          height="280"
+                          width={280}
+                          height={280}
                           crop={{
                             type: "auto",
                             source: true,
