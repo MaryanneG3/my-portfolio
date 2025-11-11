@@ -41,7 +41,7 @@ function Home() {
           <div className="flex flex-col justify-evenly pt-5 items-center w-full md:w-full lg:w-[80%] h-full">
             <motion.div
               className="flex flex-col justify-center items-center w-[85%] lg:w-[70%] h-[55%] lg:h-[40%] text-center text-lg md:text-xl lg:text-2xl text-purple-950"
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut" }}
             >
@@ -62,7 +62,7 @@ function Home() {
             {/* Navigation buttons */}
             <motion.div
               className="flex flex-col lg:flex-row justify-center lg:justify-around items-center w-full h-[45%] lg:h-[60%] gap-5 lg:gap-10 px-20"
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeIn", delay: 0.2 }}
             >
