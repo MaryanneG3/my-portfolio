@@ -6,7 +6,8 @@ import { navigationLinks } from "@/lib/navigationLinks";
 import { motion } from "framer-motion";
 import ProfileCard from "@/components/ui/ProfileCard";
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 
 const showDetailsAtom = atom(false);
 const hoveredLinkIndexAtom = atom<number | null>(null);
@@ -82,7 +83,7 @@ function Home() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, ease: "easeOut" }}
                       >
-                        <Image
+                        {/* <Image
                           alt={link.title}
                           src={`/images/icons/${link.title
                             .toLowerCase()
@@ -91,6 +92,16 @@ function Home() {
                           width={280}
                           height={280}
                           sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 15vw"
+                        /> */}
+                        <CldImage
+                          src={link.imageURL}
+                          alt={link.title}
+                          width="280"
+                          height="280"
+                          crop={{
+                            type: "auto",
+                            source: true,
+                          }}
                         />
                       </motion.div>
                     </div>
