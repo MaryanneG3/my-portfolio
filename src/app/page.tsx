@@ -20,6 +20,7 @@ function Home() {
       <video
         className="fixed top-0 left-0 w-full h-full object-cover z-0 pointer-events-none select-none"
         src="/videos/light-bg-enhanced.mp4"
+        poster="/images/background/ocean-bg-light.webp"
         autoPlay
         loop
         muted
