@@ -6,7 +6,6 @@ import { navigationLinks } from "@/lib/navigationLinks";
 import { motion } from "framer-motion";
 import ProfileCard from "@/components/ui/ProfileCard";
 import Link from "next/link";
-// import Image from "next/image";
 import { CldImage } from "next-cloudinary";
 
 const showDetailsAtom = atom(false);
