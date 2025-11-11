@@ -5,7 +5,7 @@ export const navigationLinks = [
     key: "home",
     title: "Home",
     href: "/",
-    imageURL: "home_v89oeo",
+    imageURL: "home_gjx8zt",
   },
   {
     key: "about",
@@ -15,18 +15,18 @@ export const navigationLinks = [
       label: item.label,
       href: `#${item.label.toLowerCase().replace(/\s+/g, "-")}`,
     })),
-    imageURL: "about-me_qq0xbz",
+    imageURL: "about-me_ow2dpb",
   },
   {
     key: "projects",
     title: "My Projects",
     href: "/my-projects",
-    imageURL: "my-projects_e7k7z0",
+    imageURL: "my-projects_uw6jiu",
   },
   {
     key: "contact",
     title: "Contact me",
     href: "/my-contacts",
-    imageURL: "contact-me_m44yuh",
+    imageURL: "contact-me_mg51ip",
   },
 ];
