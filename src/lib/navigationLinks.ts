@@ -5,8 +5,7 @@ export const navigationLinks = [
     key: "home",
     title: "Home",
     href: "/",
-    imageURL:
-      "https://res.cloudinary.com/dteupi9zp/image/upload/v1762838008/home_v89oeo.png",
+    imageURL: "home_v89oeo",
   },
   {
     key: "about",
@@ -16,23 +15,18 @@ export const navigationLinks = [
       label: item.label,
       href: `#${item.label.toLowerCase().replace(/\s+/g, "-")}`,
     })),
-    imageURL:
-      "https://res.cloudinary.com/dteupi9zp/image/upload/v1762838008/about-me_qq0xbz.png",
+    imageURL: "about-me_qq0xbz",
   },
   {
     key: "projects",
     title: "My Projects",
     href: "/my-projects",
-    imageURL:
-      "https://res.cloudinary.com/dteupi9zp/image/upload/v1762838008/my-projects_e7k7z0.png",
+    imageURL: "my-projects_e7k7z0",
   },
   {
     key: "contact",
     title: "Contact me",
     href: "/my-contacts",
-    imageURL:
-      "https://res.cloudinary.com/dteupi9zp/image/upload/v1762838008/contact-me_m44yuh.png",
+    imageURL: "contact-me_m44yuh",
   },
 ];
-
-// to do - fix project sublinks
