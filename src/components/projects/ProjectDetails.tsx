@@ -22,13 +22,13 @@ function ProjectDetails() {
         </p>
       </div>
 
-      <div className="flex flex-col lg:flex-row justify-between items-start w-full h-full gap-10 lg:gap-8">
+      <div className="flex flex-col lg:flex-row justify-between items-start w-full h-full gap-10 lg:gap-8 lg:bg-white/40 lg:rounded-lg lg:shadow-xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.1 }}
-          className="flex flex-col justify-between items-start gap-8 w-full h-full lg:w-[70%] px-0 lg:px-6 py-8 lg:py-8 lg:rounded-lg lg:border lg:border-purple-300 lg:bg-white/50"
+          className="flex flex-col justify-between items-start gap-8 w-full h-full lg:w-[70%] px-0 lg:px-6 py-8 lg:py-8"
         >
           <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-purple-900">
             My Responsibilities
@@ -51,7 +51,7 @@ function ProjectDetails() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.5 }}
-            className="h-full w-full lg:h-[22rem] flex flex-col justify-start gap-5 rounded-xl p-8 border border-purple-300 bg-white/50"
+            className="h-full w-full lg:h-[22rem] flex flex-col justify-start gap-5 rounded-xl p-8 "
           >
             <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-purple-900">
               Built using:
@@ -69,6 +69,7 @@ function ProjectDetails() {
                 ...(project.tools.database || []),
                 ...(project.tools.api?.architecture || []),
                 ...(project.tools.api?.externalAPI || []),
+                ...(project.tools?.tools || []),
               ].map((tool, index) => (
                 <li key={index}>{tool}</li>
               ))}
@@ -80,23 +81,26 @@ function ProjectDetails() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               viewport={{ once: true, amount: 0.5 }}
-              className="h-full w-full lg:h-[22rem] flex flex-col justify-start gap-5 rounded-xl p-8 border border-purple-300 bg-white/50"
+              className="h-full w-full lg:h-[22rem] flex flex-col justify-start gap-5 rounded-xl p-8"
             >
               <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-purple-900">
                 Important Links
               </h2>
-              <div className="flex flex-col justify-start items-start gap-2">
-                <h3 className="text-md md:text-lg lg:text-lg font-semibold">
-                  GitHub Repository
-                </h3>
-                <a
-                  href={project?.gitRepository}
-                  target="_blank"
-                  className="text-sm md:text-md lg:text-lg break-words max-w-full hover:underline"
-                >
-                  {project?.gitRepository}
-                </a>
-              </div>
+
+              {project.gitRepository && (
+                <div className="flex flex-col justify-start items-start gap-2">
+                  <h3 className="text-md md:text-lg lg:text-lg font-semibold">
+                    GitHub Repository
+                  </h3>
+                  <a
+                    href={project.gitRepository}
+                    target="_blank"
+                    className="text-sm md:text-md lg:text-lg break-words max-w-full hover:underline"
+                  >
+                    {project?.gitRepository}
+                  </a>
+                </div>
+              )}
               <div className="flex flex-col justify-start items-start gap-2">
                 <h3 className="text-md md:text-lg lg:text-lg font-semibold">
                   Live URL
