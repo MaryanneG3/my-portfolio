@@ -16,6 +16,7 @@ export default function About() {
         loop
         muted
         playsInline
+        poster="/images/background/ocean-bg-light.webp"
       />
       <div className="relative z-10 flex flex-col lg:flex-row justify-between items-center h-full w-full bg-gradient-to-b from-purple-50/70 to-purple-500/30 lg:from-purple-50/50 lg:to-purple-500/20">
         <Sidebar />
