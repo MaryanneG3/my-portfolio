@@ -2,10 +2,11 @@
 
 import ProfileCard from "@/components/ui/ProfileCard";
 import { navigationLinks } from "@/lib/navigationLinks";
-import Image from "next/image";
+// import Image from "next/image";
 import { atom, useAtom } from "jotai";
 import { usePathname, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
+import { CldImage } from "next-cloudinary";
 
 const openSectionAtom = atom<string | null>(null);
 
@@ -40,7 +41,7 @@ const Sidebar = () => {
               `}
             >
               <div className="relative w-12 h-12 border-none md:border md:border-r-2">
-                <Image
+                {/* <Image
                   alt={link.title}
                   src={`/images/icons/${link.title
                     .toLowerCase()
@@ -48,6 +49,16 @@ const Sidebar = () => {
                     .join("-")}.png`}
                   fill
                   sizes="(max-width: 768px) 20vw, (max-width: 1200px) 10vw, 5vw"
+                /> */}
+                <CldImage
+                  src={link.imageURL}
+                  alt={link.title}
+                  width={280}
+                  height={280}
+                  crop={{
+                    type: "auto",
+                    source: true,
+                  }}
                 />
               </div>
               <span className="text-xs hidden md:block">{link.title}</span>
