@@ -105,7 +105,6 @@ function Projects() {
                             ...(project.tools.runtimeEnvironments || []),
                             ...(project.tools.frameworks?.backend || []),
                             ...(project.tools.languages?.programming || []),
-                            ...(project.tools?.tools || []),
                           ].join(", ")}
                         </p>
                       </div>
