@@ -38,7 +38,7 @@ function Projects() {
         playsInline
         poster="/images/background/ocean-bg-light.webp"
       />
-      <div className="relative z-10 flex flex-col lg:flex-row justify-between items-center h-full w-full bg-gradient-to-b from-purple-50/70 to-purple-500/30 lg:from-purple-50/50 lg:to-purple-500/20">
+      <div className="relative z-10 flex flex-col lg:flex-row justify-between items-center h-full w-full bg-gradient-to-b from-purple-50/70 to-purple-500/30 lg:from-purple-50/50 lg:to-purple-500/">
         <Sidebar />
 
         <motion.div
@@ -69,6 +69,7 @@ function Projects() {
 
                 {/* Project Cards */}
                 <div
+                  key={currentClient.name}
                   className="flex flex-row justify-start items-start w-full gap-5 overflow-x-scroll lg:overflow-x-none scrollbar-hide"
                 >
                   {currentClient.projects?.map((project, index) => (
