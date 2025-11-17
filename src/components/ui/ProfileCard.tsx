@@ -15,7 +15,11 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ variant }) => {
           <div className="flex flex-col justify-center items-center gap-15 h-[80%] w-full">
             <motion.div
               className="w-[180px] h-[180px] md:w-[250px] md:h-[250px] lg:w-[300px] lg:h-[300px] rounded-3xl relative overflow-hidden shadow-xl shadow-yellow-100/50"
+<<<<<<< HEAD
               initial={{ opacity: 0, y: 50 }}
+=======
+              initial={{ opacity: 0, y: -20 }}
+>>>>>>> 77d795795712ce513ddb3fb3fce076b12541bea1
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut" }}
             >
@@ -28,7 +32,11 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ variant }) => {
               />
             </motion.div>
             <motion.div
+<<<<<<< HEAD
               initial={{ opacity: 0, y: 50 }}
+=======
+              initial={{ opacity: 0, y: -20 }}
+>>>>>>> 77d795795712ce513ddb3fb3fce076b12541bea1
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut" }}
             >
