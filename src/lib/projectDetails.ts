@@ -136,7 +136,7 @@ export const projectContent: ProjectContent = {
               "ContactForm7 plugin, CF7 PDF extension",
             ],
           },
-          href: "civil-seaparation-nz",
+          href: "civil-separation-nz",
           poster: "Civil_Separation_NZ_sml7cs",
           videoMedia: [
             {
