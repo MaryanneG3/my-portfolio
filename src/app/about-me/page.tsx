@@ -27,19 +27,26 @@ export default function About() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          <div className="flex flex-col justify-center items-center w-full h-full py-2 gap-5 lg:gap-10 lg:py-6 pl-2 pr-4 md:px-8">
-            <div className="w-full sticky top-0 py-2 text-purple-950">
+          <div className="flex flex-col justify-center items-center w-full h-full py-1 gap-5 lg:gap-10 lg:py-6 pl-2 pr-4 md:px-8">
+            <div className="w-full sticky top-0 py-1 text-purple-950">
               <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold">
                 {title}
               </h1>
             </div>
-            <div className="flex flex-col items-start w-full max-h-[85vh] overflow-y-auto pr-4 md:pr-8 lg:pr-9 custom-scrollbar">
+            <div className="flex flex-col items-start w-full max-h-[85vh] overflow-y-auto pr-6 md:pr-8 lg:pr-9 custom-scrollbar">
               <div className="w-full flex flex-col items-start pl-2 lg:pl-5 gap-10">
                 {sublinks?.map((link, index) => (
                   <div
                     key={index}
                     id={link.label.toLowerCase().replace(/\s+/g, "-")}
-                    className="flex flex-col justify-start items-start gap-6 lg:gap-10 pl-2 md:pl-8 lg:pl-10 h-full w-full pb-20"
+                    className="flex flex-col justify-start items-start gap-6 lg:gap-11 pl-2 md:pl-8 lg:pl-10 lg:pr-10 h-full w-full pb-20 pt-5 lg:pt-8 bg-white/70 rounded-2xl shadow-md"
+                    style={{
+                      border: "1px solid",
+                      borderImage:
+                        "linear-gradient(45deg, #E7DDFF, #FFECA1) 0 ",
+                      borderRadius: "15px",
+                      boxShadow: "0 0 5px 1px #E7DDFF, 0 0 5px 1px #FFECA1",
+                    }}
                   >
                     <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-purple-950">
                       {link.label}
