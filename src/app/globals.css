@@ -12,6 +12,11 @@ h1 {
   font-family: "Trebuchet MS", var(--font-space-grotesk), sans-serif;
 }
 
+h2,
+p {
+  background-color: transparent;
+}
+
 /* Custom Scrollbar - Vertical scroll */
 .custom-scrollbar::-webkit-scrollbar {
   width: 17px;
@@ -80,4 +85,8 @@ h1 {
   &::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
   }
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }

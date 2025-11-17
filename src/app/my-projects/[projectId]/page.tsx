@@ -6,6 +6,8 @@ import { notFound } from "next/navigation";
 import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import ProjectDetails from "@/components/projects/ProjectDetails";
+import { CldVideoPlayer } from "next-cloudinary";
+import "next-cloudinary/dist/cld-video-player.css";
 
 export default function ProjectPage() {
   const { projectId } = useParams() as { projectId: string };
@@ -25,6 +27,7 @@ export default function ProjectPage() {
         loop
         muted
         playsInline
+        poster="/images/background/ocean-bg-light.webp"
       />
       <div className="relative z-10 flex flex-col lg:flex-row justify-between items-center h-full w-full bg-gradient-to-b from-purple-50/70 to-purple-500/30 lg:from-purple-50/50 lg:to-purple-500/20">
         <Sidebar />
@@ -44,7 +47,7 @@ export default function ProjectPage() {
                 <div className="w-full hidden md:block">
                   <iframe
                     src={project.liveUrl}
-                    className="w-full max-w-6xl md:h-[80vh] lg:h-[90vh] mt-6 rounded-lg border border-purple-300"
+                    className="w-full max-w-6xl md:h-[80vh] lg:h-[90vh] mt-6 rounded-lg shadow-lg shadow-black/40"
                     loading="lazy"
                     title={`${project.client} Live Preview`}
                   ></iframe>
@@ -62,15 +65,15 @@ export default function ProjectPage() {
                       <h3 className="text-md md:text-lg lg:text-xl font-bold text-purple-900">
                         {video.alt}
                       </h3>
-                      <video
-                        className="w-full max-w-6xl h-auto mt-6 rounded-lg border border-purple-300"
+                      <CldVideoPlayer
                         src={video.src}
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        title={`${video.alt} Video Preview`}
-                      ></video>
+                        className="w-full max-w-6xl h-auto mt-6 rounded-lg border border-purple-300"
+                        autoplay={true}
+                        loop={true}
+                        muted={true}
+                        playsinline={true}
+                        controls={true}
+                      />
                     </div>
                   ))}
                 </div>
@@ -87,15 +90,15 @@ export default function ProjectPage() {
                       <h3 className="text-md md:text-lg lg:text-xl font-bold text-purple-900">
                         {video.alt}
                       </h3>
-                      <video
-                        className="w-full max-w-6xl h-auto mt-6 rounded-lg border border-purple-300"
+                      <CldVideoPlayer
                         src={video.src}
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        title={`${video.alt} Video Preview`}
-                      ></video>
+                        className="w-full max-w-6xl h-auto mt-6 rounded-lg border border-purple-300"
+                        autoplay={true}
+                        loop={true}
+                        muted={true}
+                        playsinline={true}
+                        controls={true}
+                      />
                     </div>
                   ))}
                 </div>

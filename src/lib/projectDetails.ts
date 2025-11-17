@@ -19,6 +19,7 @@ type Toolset = {
     externalAPI?: string[];
   };
   database?: string[];
+  tools?: string[];
 };
 
 type Project = {
@@ -28,6 +29,7 @@ type Project = {
   tools: Toolset;
   href: string;
   poster: string;
+  lazyloadposter?: string;
   videoMedia?: {
     src: string;
     alt: string;
@@ -72,37 +74,145 @@ export const projectContent: ProjectContent = {
             versionControl: ["Git"],
           },
           href: "aka",
-          poster: "/videos/projects/aka/Landing Page - Learn More.mp4",
+          poster: "Landing_Page_-_Learn_More_bios1m",
+          lazyloadposter: "insert image",
           videoMedia: [
             {
-              src: "/videos/projects/aka/Landing Page - Learn More.mp4",
+              src: "Landing_Page_-_Learn_More_bios1m",
               alt: "Auckland Kindergarten Association Landing Page",
             },
             {
-              src: "/videos/projects/aka/Moments with Tamariki and Kaiako Routing.mp4",
+              src: "Moments_With_Tamariki_And_Kaiako_Routing_ypaozo",
               alt: "Moments with Tamariki & Kaiako Landing Page",
             },
             {
-              src: "/videos/projects/aka/Moments with Tamariki and Kaiako Scenes.mp4",
+              src: "Moments_With_Tamariki_And_Kaiako_Scenes_pxntlv",
               alt: "Moments with Tamariki & Kaiako Scenes Overview",
             },
             {
-              src: "/videos/projects/aka/Games - Trash Sorting.mp4",
+              src: "Games_-_Trash_Sorting_krkwxd",
               alt: "Games - Trash Sorting Game",
             },
             {
-              src: "/videos/projects/aka/Games - Cooking.mp4",
+              src: "Games_-_Cooking_kmnkcq",
               alt: "Games - Garden to Table Cooking Game",
             },
             {
-              src: "/videos/projects/aka/Games - Tracing.mp4",
+              src: "Games_-_Tracing_t1zgyh",
               alt: "Games - Tracing ABC's Game",
             },
             {
-              src: "/videos/projects/aka/Games - Sound Matching.mp4",
+              src: "Games_-_Sound_Matching_ey0lfx",
               alt: "Games - Sound Matching Game",
             },
           ],
+        },
+      ],
+    },
+    {
+      name: "Freelance work & Personal Projects",
+      description:
+        "A collection of freelance projects showcasing work completed for real clients as well as personal projects created to explore new ideas, tools, and web development concepts.",
+      projects: [
+        {
+          client: "Civil Separation NZ",
+          description:
+            "A website built for a divorce lawyer to establish an online presence and provide information about legal services.",
+          myContribution: [
+            "Collaborated with the client, a design student at AUT, to understand the structure and presentation he wanted for his portfolio.",
+            "Selected and customised a Framer template to match the client’s preferred visual style and requirements.",
+            "Arranged sections and components using Framer’s visual builder, including About, Work Showcase, and Contact areas.",
+            "Adjusted colours, typography, and layout spacing to align with the client’s design direction.",
+            "Organised and prepared the client’s media assets for use across the site.",
+            "Configured navigation, transitions, and interactive features using Framer’s built-in tools.",
+            "Published test versions for client review and made ongoing refinements based on feedback.",
+          ],
+          tools: {
+            frameworks: {
+              frontend: ["Divi theme on WordPress"],
+            },
+            tools: [
+              "RankMath SEO plugin",
+              "ContactForm7 plugin",
+              "CF7 PDF extension",
+            ],
+          },
+          href: "civil-separation-nz",
+          poster: "Civil_Separation_NZ_sml7cs",
+          videoMedia: [
+            {
+              src: "Civil_Separation_NZ_sml7cs",
+              alt: "Civil Separation NZ Application Form",
+            },
+          ],
+          liveUrl: "https://civilseparation.co.nz/solo-application/",
+        },
+        {
+          client: "Online Design Portfolio",
+          description:
+            "An online portfolio built for a design student at AUT to showcase his creative work and academic projects. The site is being developed using a Framer template, allowing flexible layout adjustments, visual editing, and quick iteration without coding. The project is ongoing and continues to be refined as new design assets become available.",
+          myContribution: [
+            "Collaborated with the client, a design student at AUT, to understand the structure and presentation he wanted for his portfolio.",
+            "Selected and customised a Framer template to match the client’s preferred visual style and requirements.",
+            "Arranged sections and components using Framer’s visual builder, including About, Work Showcase, and Contact areas.",
+            "Adjusted colours, typography, and layout spacing to align with the client’s design direction.",
+            "Organised and prepared the client’s media assets for use across the site.",
+            "Configured navigation, transitions, and interactive features using Framer’s built-in tools.",
+            "Published test versions for client review and made ongoing refinements based on feedback.",
+          ],
+          tools: {
+            frameworks: {
+              frontend: ["Framer"],
+            },
+          },
+          href: "ahmeds-portfolio",
+          poster: "Ahmed_s_Portfolio_hpyn43",
+          videoMedia: [
+            {
+              src: "Ahmed_s_Portfolio_hpyn43",
+              alt: "Ahmed's Portfolio Landing Page",
+            },
+          ],
+          liveUrl: "https://centered-friday-033849.framer.app/",
+        },
+        {
+          client: "My portfolio",
+          description:
+            "This is my personal portfolio website designed to showcase my development skills and projects. It features an About Me section, a Projects page with live previews of deployed applications using embedded iframes, and a Contact page with a fully functional email form. The form is powered by SendRail and connected via a custom REST API built with Node.js and Express. Developed using Next.js, TypeScript, and Jotai for state management, the site is responsive, fast, and deployed on Vercel for global accessibility.",
+          myContribution: [
+            "Developed a personal portfolio site using Next.js and TypeScript, structured for performance, scalability, and responsiveness.",
+            "Designed and built an About Me section to communicate my background, skills, and goals as a developer.",
+            "Implemented a Projects page with live embedded previews (iframes) of my deployed applications to provide real-time interaction for visitors.",
+            "Created a Contact page with an integrated form that uses SendRail to send emails directly, improving accessibility for potential collaborators or clients.",
+            "Built and connected a REST API using Node.js and Express to handle form submissions and securely deliver messages via SendRail.",
+            "Utilized Jotai for efficient and modular state management, with clearly organized folders for atoms and custom hooks.",
+            "Deployed the portfolio to Vercel with continuous deployment and optimized performance via edge functions.",
+            "Managed source control through Git, maintaining clear version history and structured development branches.",
+          ],
+          tools: {
+            frameworks: {
+              frontend: ["Next.js"],
+              styling: ["Tailwind CSS"],
+              backend: ["Express.js"],
+            },
+            libraries: { frontend: ["Jotai"] },
+            languages: { programming: ["TypeScript"] },
+            runtimeEnvironments: ["Node.js"],
+            versionControl: ["Git"],
+            api: {
+              architecture: ["RESTful API"],
+            },
+          },
+          href: "my-portfolio",
+          poster: "Portfolio_hillwf",
+          videoMedia: [
+            {
+              src: "Portfolio_hillwf",
+              alt: "My Portfolio Landing Page",
+            },
+          ],
+          gitRepository: "https://github.com/MaryanneG3/my-portfolio.git",
+          liveUrl: "https://maryanne-galo.vercel.app/",
         },
       ],
     },
@@ -137,14 +247,14 @@ export const projectContent: ProjectContent = {
             database: ["MongoDB"],
           },
           href: "z-fuel",
-          poster: "/videos/projects/mission-ready/z-Fuel.mp4",
+          poster: "Z-Fuel_ynzhsd",
           videoMedia: [
             {
-              src: "/videos/projects/mission-ready/Z-fuel - Landing Page.mp4",
+              src: "Z-Fuel_-_Landing_Page_wczpds",
               alt: "Z-Fuel Landing Page",
             },
             {
-              src: "/videos/projects/mission-ready/Z-fuel - Order Online Page.mp4",
+              src: "Z-Fuel_-_Order_Online_Page_coezyd",
               alt: "Z-Fuel Order Online Page",
             },
           ],
@@ -152,7 +262,7 @@ export const projectContent: ProjectContent = {
           liveUrl: "https://z-fuel-redesign.vercel.app/",
         },
         {
-          client: "Insurance Recommendation Chatbot",
+          client: "Insurance Chatbot",
           description:
             "This full-stack web application features 'Tina', an AI-powered chatbot that guides users through choosing the right insurance policy. Through a conversational interface, Tina gathers details about users’ driving habits, vehicle, and insurance needs, then delivers tailored recommendations with clear explanations. Built with Google Gemini AI and a clean, user-friendly UI, the app is containerized using Docker for seamless deployment across environments.",
           myContribution: [
@@ -176,66 +286,20 @@ export const projectContent: ProjectContent = {
             },
           },
           href: "turners-automotive",
-          poster: "/videos/projects/mission-ready/Turners.mp4",
+          poster: "Turners_uhwjtg",
           videoMedia: [
             {
-              src: "/videos/projects/mission-ready/Turners - Landing Page.mp4",
+              src: "Turners_-_Landing_Page_m1yacp",
               alt: "Turners Landing Page",
             },
             {
-              src: "/videos/projects/mission-ready/Turners - Tina the Chatbot.mp4",
+              src: "Turners_-_Tina_The_Chatbot_t68vrr",
               alt: "Tina the Insurance Recommendation Chatbot",
             },
           ],
           gitRepository:
             "https://github.com/MaryanneG3/turners_insurance_recommendation_application.git",
           liveUrl: "https://turners-insurance-recommendation.vercel.app/",
-        },
-      ],
-    },
-    {
-      name: "Personal projects",
-      description:
-        "A collection of self-initiated projects where I explored web development concepts and built solutions based on real-world ideas and interests.",
-      projects: [
-        {
-          client: "My portfolio",
-          description:
-            "This is my personal portfolio website designed to showcase my development skills and projects. It features an About Me section, a Projects page with live previews of deployed applications using embedded iframes, and a Contact page with a fully functional email form. The form is powered by SendRail and connected via a custom REST API built with Node.js and Express. Developed using Next.js, TypeScript, and Jotai for state management, the site is responsive, fast, and deployed on Vercel for global accessibility.",
-          myContribution: [
-            "Developed a personal portfolio site using Next.js and TypeScript, structured for performance, scalability, and responsiveness.",
-            "Designed and built an About Me section to communicate my background, skills, and goals as a developer.",
-            "Implemented a Projects page with live embedded previews (iframes) of my deployed applications to provide real-time interaction for visitors.",
-            "Created a Contact page with an integrated form that uses SendRail to send emails directly, improving accessibility for potential collaborators or clients.",
-            "Built and connected a REST API using Node.js and Express to handle form submissions and securely deliver messages via SendRail.",
-            "Utilized Jotai for efficient and modular state management, with clearly organized folders for atoms and custom hooks.",
-            "Deployed the portfolio to Vercel with continuous deployment and optimized performance via edge functions.",
-            "Managed source control through Git, maintaining clear version history and structured development branches.",
-          ],
-          tools: {
-            frameworks: {
-              frontend: ["Next.js"],
-              styling: ["Tailwind CSS"],
-              backend: ["Express.js"],
-            },
-            libraries: { frontend: ["Jotai"] },
-            languages: { programming: ["TypeScript"] },
-            runtimeEnvironments: ["Node.js"],
-            versionControl: ["Git"],
-            api: {
-              architecture: ["RESTful API"],
-            },
-          },
-          href: "my-portfolio",
-          poster: "/videos/projects/personal/Portfolio.mp4",
-          videoMedia: [
-            {
-              src: "/videos/projects/personal/Portfolio.mp4",
-              alt: "My Portfolio Landing Page",
-            },
-          ],
-          gitRepository: "https://github.com/MaryanneG3/my-portfolio.git",
-          liveUrl: "https://maryanne-galo.vercel.app/",
         },
       ],
     },

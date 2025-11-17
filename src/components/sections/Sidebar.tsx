@@ -58,7 +58,7 @@ const Sidebar = () => {
 
       {/* sidebar - for medium and large screens */}
       <motion.div
-        className="hidden lg:flex w-[380px] h-full flex-col justify-between items-center gap-5 py-10 bg-white"
+        className="hidden lg:flex w-[320px] min-w-[320px] h-full flex-col justify-between items-center gap-5 py-10 bg-white"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
@@ -109,7 +109,7 @@ const Sidebar = () => {
                             router.push(targetUrl);
                           }
                         }}
-                        className="flex items-center w-full px-5 py-2 text-lg text-left text-purple-800 cursor-pointer transition-colors duration-200 hover:rounded-lg hover:font-bold hover:bg-purple-200/60"
+                        className="flex items-center w-full px-5 py-1 text-lg text-left text-purple-800 cursor-pointer transition-colors duration-200 hover:rounded-lg hover:font-bold hover:bg-purple-200/60"
                       >
                         {sublink.label}
                       </button>
