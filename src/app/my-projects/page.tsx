@@ -69,7 +69,6 @@ function Projects() {
 
                 {/* Project Cards */}
                 <div
-                  key={currentClient.name}
                   className="flex flex-row justify-start items-start w-full gap-5 overflow-x-scroll lg:overflow-x-none scrollbar-hide"
                 >
                   {currentClient.projects?.map((project, index) => (
