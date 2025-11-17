@@ -1,11 +1,11 @@
 import { aboutContent } from "./aboutMe";
-// import { projectContent } from "./projectDetails";
 
 export const navigationLinks = [
   {
     key: "home",
     title: "Home",
     href: "/",
+    imageURL: "home_gjx8zt",
   },
   {
     key: "about",
@@ -15,21 +15,18 @@ export const navigationLinks = [
       label: item.label,
       href: `#${item.label.toLowerCase().replace(/\s+/g, "-")}`,
     })),
+    imageURL: "about-me_ow2dpb",
   },
   {
     key: "projects",
     title: "My Projects",
     href: "/my-projects",
-    // sublinks: projectContent.clients.map((item) => ({
-    //   label: item.name,
-    //   href: `#${item.name.toLowerCase().replace(/\s+/g, "-")}`,
-    // })),
+    imageURL: "my-projects_uw6jiu",
   },
   {
     key: "contact",
     title: "Contact me",
     href: "/my-contacts",
+    imageURL: "contact-me_mg51ip",
   },
 ];
-
-// to do - fix project sublinks

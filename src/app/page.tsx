@@ -6,7 +6,7 @@ import { navigationLinks } from "@/lib/navigationLinks";
 import { motion } from "framer-motion";
 import ProfileCard from "@/components/ui/ProfileCard";
 import Link from "next/link";
-import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 
 const showDetailsAtom = atom(false);
 const hoveredLinkIndexAtom = atom<number | null>(null);
@@ -20,6 +20,7 @@ function Home() {
       <video
         className="fixed top-0 left-0 w-full h-full object-cover z-0 pointer-events-none select-none"
         src="/videos/light-bg-enhanced.mp4"
+        poster="/images/background/ocean-bg-light.webp"
         autoPlay
         loop
         muted
@@ -41,7 +42,7 @@ function Home() {
           <div className="flex flex-col justify-evenly pt-5 items-center w-full md:w-full lg:w-[80%] h-full">
             <motion.div
               className="flex flex-col justify-center items-center w-[85%] lg:w-[70%] h-[55%] lg:h-[40%] text-center text-lg md:text-xl lg:text-2xl text-purple-950"
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut" }}
             >
@@ -62,7 +63,7 @@ function Home() {
             {/* Navigation buttons */}
             <motion.div
               className="flex flex-col lg:flex-row justify-center lg:justify-around items-center w-full h-[45%] lg:h-[60%] gap-5 lg:gap-10 px-20"
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeIn", delay: 0.2 }}
             >
@@ -82,15 +83,15 @@ function Home() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, ease: "easeOut" }}
                       >
-                        <Image
+                        <CldImage
+                          src={link.imageURL}
                           alt={link.title}
-                          src={`/images/icons/${link.title
-                            .toLowerCase()
-                            .split(" ")
-                            .join("-")}.png`}
                           width={280}
                           height={280}
-                          sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 15vw"
+                          crop={{
+                            type: "auto",
+                            source: true,
+                          }}
                         />
                       </motion.div>
                     </div>
