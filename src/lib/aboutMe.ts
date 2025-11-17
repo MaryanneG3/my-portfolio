@@ -48,7 +48,7 @@ export const aboutContent = {
       },
     },
     {
-      label: "Work experience",
+      label: "Experience",
       jobs: {
         1: {
           title: "Full Stack Developer Intern",

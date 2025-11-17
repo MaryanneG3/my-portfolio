@@ -62,7 +62,7 @@ export const projectContent: ProjectContent = {
           description: `The AKA Concept Prototype is an interactive web application developed for the Auckland Kindergarten Association to showcase their history, core values, and growth over time. It features two main components: an interactive timeline that highlights key milestones in AKA’s journey, and the "Moments with Tamariki & Kaiako" experience, which immerses users in a day at an AKA kindergarten through interactive storytelling and educational games. Designed to engage parents, educators, and stakeholders, the prototype demonstrates how AKA has evolved while staying true to its foundational values in early childhood education.`,
           myContribution: [
             "Developed the landing page and the 'Moments with Tamariki & Kaiako' interactive experience, aligning with the project's storytelling and engagement goals.",
-            "Designed and built five educational games: a tracing game using ReactSketchCanvas, a garden-to-table cooking game, a match-the-sound-to-the-animal game, a trash sorting game, and an interactive choice-driven narrative.",
+            "Designed and built four educational games: a tracing game using ReactSketchCanvas, a garden-to-table cooking game, a match-the-sound-to-the-animal game, a trash sorting game, and an interactive choice-driven narrative.",
             "Created and maintained reusable UI components such as headers, footers, and buttons with variant support to ensure visual consistency and scalability across the application.",
             "Collaborated closely with designers and team members to ensure the interface and features aligned with the needs of parents, educators, and stakeholders.",
             "Used Git for version control and contributed to team workflows through code commits, reviews, and collaborative problem-solving.",
@@ -117,15 +117,16 @@ export const projectContent: ProjectContent = {
         {
           client: "Civil Separation NZ",
           description:
-            "A website built for a divorce lawyer to establish an online presence and provide information about legal services.",
+            "A website built for a legal advisor providing civil separation services online, offering information and resources for clients.",
+
           myContribution: [
-            "Collaborated with the client, a design student at AUT, to understand the structure and presentation he wanted for his portfolio.",
-            "Selected and customised a Framer template to match the client’s preferred visual style and requirements.",
-            "Arranged sections and components using Framer’s visual builder, including About, Work Showcase, and Contact areas.",
-            "Adjusted colours, typography, and layout spacing to align with the client’s design direction.",
-            "Organised and prepared the client’s media assets for use across the site.",
-            "Configured navigation, transitions, and interactive features using Framer’s built-in tools.",
-            "Published test versions for client review and made ongoing refinements based on feedback.",
+            "Implemented SEO improvements using the RankMath plugin, increasing the site’s SEO score from 50% to 70%.",
+            "Updated the application form layout from a single-column design to a structured, user-friendly multi-column format.",
+            "Enhanced the form’s PDF output and email submission format to ensure clients receive professional copies upon submission.",
+            "Set up Google reCAPTCHA on the form to prevent spam submissions.",
+            "Configured navigation, interactive features, and site components for a seamless user experience.",
+            "Organised and optimised media assets for use across the site.",
+            "Responsible for ongoing site maintenance and updates.",
           ],
           tools: {
             frameworks: {
@@ -135,6 +136,7 @@ export const projectContent: ProjectContent = {
               "RankMath SEO plugin",
               "ContactForm7 plugin",
               "CF7 PDF extension",
+              "Google reCAPTCHA plugin",
             ],
           },
           href: "civil-separation-nz",

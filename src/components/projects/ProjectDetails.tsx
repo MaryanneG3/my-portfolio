@@ -22,7 +22,7 @@ function ProjectDetails() {
         </p>
       </div>
 
-      <div className="flex flex-col lg:flex-row justify-between items-start w-full h-full gap-10 lg:gap-8 lg:bg-white/40 lg:rounded-lg lg:shadow-xl">
+      <div className="flex flex-col lg:flex-row justify-between items-start w-full h-full gap-10 lg:gap-8 lg:bg-white/80 lg:rounded-xl lg:shadow-xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -51,7 +51,7 @@ function ProjectDetails() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.5 }}
-            className="h-full w-full lg:h-[22rem] flex flex-col justify-start gap-5 rounded-xl p-8 "
+            className="h-full w-full lg:h-[22rem] flex flex-col justify-start gap-5 rounded-xl p-8"
           >
             <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-purple-900">
               Built using:
