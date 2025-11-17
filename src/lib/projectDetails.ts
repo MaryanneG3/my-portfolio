@@ -133,7 +133,8 @@ export const projectContent: ProjectContent = {
             },
             tools: [
               "RankMath SEO plugin",
-              "ContactForm7 plugin, CF7 PDF extension",
+              "ContactForm7 plugin",
+              "CF7 PDF extension",
             ],
           },
           href: "civil-separation-nz",
