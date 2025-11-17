@@ -43,7 +43,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ variant }) => {
         <div className="flex flex-col justify-center items-center gap-4 h-full w-full">
           <motion.div
             className="w-[120px] h-[120px] md:w-[140px] md:h-[140px] lg:w-[140px] lg:h-[140px] rounded-full relative overflow-hidden shadow-xl shadow-yellow-100/50"
-            initial={{ opacity: 0, z: -50 }}
+            initial={{ opacity: 0, z: -40 }}
             animate={{ opacity: 1, z: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
           >
