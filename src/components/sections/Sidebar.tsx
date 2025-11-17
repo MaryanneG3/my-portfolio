@@ -109,7 +109,7 @@ const Sidebar = () => {
                             router.push(targetUrl);
                           }
                         }}
-                        className="flex items-center w-full px-5 py-1 text-lg text-left text-purple-800 cursor-pointer transition-colors duration-200 hover:rounded-lg hover:font-bold hover:bg-purple-200/60"
+                        className="flex items-center w-full px-5 py-1 text-md text-left text-purple-800 cursor-pointer transition-colors duration-200 hover:rounded-lg hover:font-semibold hover:bg-purple-200/60"
                       >
                         {sublink.label}
                       </button>
