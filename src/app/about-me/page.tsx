@@ -33,7 +33,7 @@ export default function About() {
                 {title}
               </h1>
             </div>
-            <div className="flex flex-col items-start w-full max-h-[85vh] overflow-y-auto pr-6 md:pr-8 lg:pr-9 custom-scrollbar">
+            <div className="flex flex-col items-start w-full max-h-[85vh] overflow-y-auto pr-4 md:pr-8 lg:pr-9 custom-scrollbar">
               <div className="w-full flex flex-col items-start pl-2 lg:pl-5 gap-10">
                 {sublinks?.map((link, index) => (
                   <div
