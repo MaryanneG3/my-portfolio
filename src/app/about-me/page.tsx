@@ -16,7 +16,6 @@ export default function About() {
         loop
         muted
         playsInline
-        poster="/images/background/ocean-bg-light.webp"
       />
       <div className="relative z-10 flex flex-col lg:flex-row justify-between items-center h-full w-full bg-gradient-to-b from-purple-50/70 to-purple-500/30 lg:from-purple-50/50 lg:to-purple-500/20">
         <Sidebar />
@@ -33,20 +32,13 @@ export default function About() {
                 {title}
               </h1>
             </div>
-            <div className="flex flex-col items-start w-full max-h-[85vh] overflow-y-auto pr-4 md:pr-8 lg:pr-9 custom-scrollbar">
-              <div className="w-full flex flex-col items-start pl-2 lg:pl-5 gap-10">
+            <div className="flex flex-col items-start w-full max-h-[85vh] overflow-y-auto pr-5 pl-0 md:pr-8 lg:pr-9 custom-scrollbar">
+              <div className="w-full flex flex-col items-start pl-2 pr-5 md:pr-0 lg:pr-0 lg:pl-5 gap-10">
                 {sublinks?.map((link, index) => (
                   <div
                     key={index}
                     id={link.label.toLowerCase().replace(/\s+/g, "-")}
-                    className="flex flex-col justify-start items-start gap-6 lg:gap-11 pl-2 md:pl-8 lg:pl-10 lg:pr-10 h-full w-full pb-20 pt-5 lg:pt-8 bg-white/70 rounded-2xl shadow-md"
-                    style={{
-                      border: "1px solid",
-                      borderImage:
-                        "linear-gradient(45deg, #E7DDFF, #FFECA1) 0 ",
-                      borderRadius: "15px",
-                      boxShadow: "0 0 5px 1px #E7DDFF, 0 0 5px 1px #FFECA1",
-                    }}
+                    className="flex flex-col justify-start items-start gap-6 lg:gap-11 pr-0 md:pr-5 pl-0 md:pl-8 lg:pl-10 lg:pr-10 h-full w-full pb-20 pt-5 lg:pt-8 bg-transparent md:bg-white/60 lg:bg-white/70 rounded-2xl lg:shadow-md"
                   >
                     <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-purple-950">
                       {link.label}
