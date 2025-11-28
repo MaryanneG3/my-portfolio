@@ -114,7 +114,7 @@ export const projectContent: ProjectContent = {
             },
             tools: ["Bolt.new"],
           },
-          href: "my-portfolio",
+          href: "tradie-materials-live-nz",
           poster: "TML_NZ_-_Demo_omkvlv",
           videoMedia: [
             {
