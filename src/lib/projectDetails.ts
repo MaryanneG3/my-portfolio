@@ -108,6 +108,7 @@ export const projectContent: ProjectContent = {
             },
             languages: { programming: ["TypeScript"] },
             runtimeEnvironments: ["Node.js"],
+            database: ["Supabase"],
             versionControl: ["Git"],
             api: {
               architecture: ["RESTful API"],
