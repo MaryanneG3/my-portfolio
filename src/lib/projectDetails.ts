@@ -53,6 +53,156 @@ export const projectContent: ProjectContent = {
   title: "My Projects",
   clients: [
     {
+      name: "Freelance work",
+      description:
+        "A collection of freelance projects showcasing work completed for real clients as well as personal projects created to explore new ideas, tools, and web development concepts.",
+      projects: [
+        {
+          client: "Online Design Portfolio",
+          description:
+            "An online portfolio built for a design student at AUT to showcase his creative work and academic projects. The site is being developed using a Framer template, allowing flexible layout adjustments, visual editing, and quick iteration without coding. The project is ongoing and continues to be refined as new design assets become available.",
+          myContribution: [
+            "Collaborated with the client, a design student at AUT, to understand the structure and presentation he wanted for his portfolio.",
+            "Selected and customised a Framer template to match the client’s preferred visual style and requirements.",
+            "Arranged sections and components using Framer’s visual builder, including About, Work Showcase, and Contact areas.",
+            "Adjusted colours, typography, and layout spacing to align with the client’s design direction.",
+            "Organised and prepared the client’s media assets for use across the site.",
+            "Configured navigation, transitions, and interactive features using Framer’s built-in tools.",
+            "Published test versions for client review and made ongoing refinements based on feedback.",
+          ],
+          tools: {
+            frameworks: {
+              frontend: ["Framer"],
+            },
+          },
+          href: "ahmeds-portfolio",
+          poster: "Ahmed_s_Portfolio_hpyn43",
+          videoMedia: [
+            {
+              src: "Ahmed_s_Portfolio_hpyn43",
+              alt: "Ahmed's Portfolio Landing Page",
+            },
+          ],
+          liveUrl: "https://centered-friday-033849.framer.app/",
+        },
+        {
+          client: "Trade Materials Live NZ",
+          description:
+            "Trade Materials Live NZ is a web-based platform designed to save New Zealand tradies time, reduce costs, and simplify the quoting and procurement process. Built as a prototype during the Bolt.new Hackathon 2024, the application allows tradies to select their role, discover local stores, compare prices for required materials, build quotes, and generate invoices. The platform leverages AI-powered code generation and web scraping to provide real-time pricing and stock information from various suppliers across New Zealand.",
+          myContribution: [
+            "Ideated the original concept for Tradie Materials Live NZ based on real problems faced by tradies sourcing materials in New Zealand.",
+            "Designed the initial user journey, including role selection, store discovery, price comparison, quote builder, and invoice generation.",
+            "Created the UI layout in Figma and translated it into React components for the prototype.",
+            "Directed the frontend generation by creating detailed prompts that guided Bolt.new to produce pages for store selection, product listings, and price comparison.",
+            "Designed the backend behaviour through prompt engineering, specifying the Node.js/Express logic required to handle product data, mock pricing, and simulated stock responses.",
+            "Created structured prompt flows that instructed Bolt to generate temporary mock data models emulating live pricing and stock before API or scraping integration.",
+            "Developed and iterated on Bolt-powered scraping scripts by refining extraction prompts to pull data from New Zealand hardware suppliers.",
+            "Set up Supabase integration by defining schema, data requirements, and access patterns through prompts that guided Bolt’s code output.",
+            "Deployed the prototype to Netlify and ensured it was accessible for hackathon submission.",
+          ],
+          tools: {
+            frameworks: {
+              frontend: ["React.js"],
+              styling: ["Tailwind CSS"],
+              backend: ["Express.js"],
+            },
+            languages: { programming: ["TypeScript"] },
+            runtimeEnvironments: ["Node.js"],
+            versionControl: ["Git"],
+            api: {
+              architecture: ["RESTful API"],
+            },
+            tools: ["Bolt.new"],
+          },
+          href: "my-portfolio",
+          poster: "TML_NZ_-_Demo_omkvlv",
+          videoMedia: [
+            {
+              src: "TML_NZ_-_Demo_omkvlv",
+              alt: "Tradie Materials Live NZ Landing Page",
+            },
+          ],
+          gitRepository:
+            "https://github.com/MaryanneG3/Tradie-Materials-Live-MVP",
+          liveUrl: "https://tradie-materials-live-nz.netlify.app/",
+        },
+        {
+          client: "Civil Separation NZ",
+          description:
+            "A website built for a legal advisor providing civil separation services online, offering information and resources for clients.",
+
+          myContribution: [
+            "Implemented SEO improvements using the RankMath plugin, increasing the site’s SEO score from 50% to 70%.",
+            "Updated the application form layout from a single-column design to a structured, user-friendly multi-column format.",
+            "Enhanced the form’s PDF output and email submission format to ensure clients receive professional copies upon submission.",
+            "Set up Google reCAPTCHA on the form to prevent spam submissions.",
+            "Configured navigation, interactive features, and site components for a seamless user experience.",
+            "Organised and optimised media assets for use across the site.",
+            "Responsible for ongoing site maintenance and updates.",
+          ],
+          tools: {
+            frameworks: {
+              frontend: ["Divi theme on WordPress"],
+            },
+            tools: [
+              "RankMath SEO plugin",
+              "ContactForm7 plugin",
+              "CF7 PDF extension",
+              "Google reCAPTCHA plugin",
+            ],
+          },
+          href: "civil-separation-nz",
+          poster: "Civil_Separation_NZ_sml7cs",
+          videoMedia: [
+            {
+              src: "Civil_Separation_NZ_sml7cs",
+              alt: "Civil Separation NZ Application Form",
+            },
+          ],
+          liveUrl: "https://civilseparation.co.nz/solo-application/",
+        },
+        {
+          client: "My portfolio",
+          description:
+            "This is my personal portfolio website designed to showcase my development skills and projects. It features an About Me section, a Projects page with live previews of deployed applications using embedded iframes, and a Contact page with a fully functional email form. The form is powered by SendRail and connected via a custom REST API built with Node.js and Express. Developed using Next.js, TypeScript, and Jotai for state management, the site is responsive, fast, and deployed on Vercel for global accessibility.",
+          myContribution: [
+            "Developed a personal portfolio site using Next.js and TypeScript, structured for performance, scalability, and responsiveness.",
+            "Designed and built an About Me section to communicate my background, skills, and goals as a developer.",
+            "Implemented a Projects page with live embedded previews (iframes) of my deployed applications to provide real-time interaction for visitors.",
+            "Created a Contact page with an integrated form that uses SendRail to send emails directly, improving accessibility for potential collaborators or clients.",
+            "Built and connected a REST API using Node.js and Express to handle form submissions and securely deliver messages via SendRail.",
+            "Utilized Jotai for efficient and modular state management, with clearly organized folders for atoms and custom hooks.",
+            "Deployed the portfolio to Vercel with continuous deployment and optimized performance via edge functions.",
+            "Managed source control through Git, maintaining clear version history and structured development branches.",
+          ],
+          tools: {
+            frameworks: {
+              frontend: ["Next.js"],
+              styling: ["Tailwind CSS"],
+              backend: ["Express.js"],
+            },
+            libraries: { frontend: ["Jotai"] },
+            languages: { programming: ["TypeScript"] },
+            runtimeEnvironments: ["Node.js"],
+            versionControl: ["Git"],
+            api: {
+              architecture: ["RESTful API"],
+            },
+          },
+          href: "my-portfolio",
+          poster: "Portfolio_hillwf",
+          videoMedia: [
+            {
+              src: "Portfolio_hillwf",
+              alt: "My Portfolio Landing Page",
+            },
+          ],
+          gitRepository: "https://github.com/MaryanneG3/my-portfolio.git",
+          liveUrl: "https://maryanne-galo.vercel.app/",
+        },
+      ],
+    },
+    {
       name: "Seen Ventures Internship",
       description:
         "A 10-week internship with Seen Ventures focused on developing a web application for the Auckland Kindergarten Association.",
@@ -106,115 +256,6 @@ export const projectContent: ProjectContent = {
               alt: "Games - Sound Matching Game",
             },
           ],
-        },
-      ],
-    },
-    {
-      name: "Freelance work & Personal Projects",
-      description:
-        "A collection of freelance projects showcasing work completed for real clients as well as personal projects created to explore new ideas, tools, and web development concepts.",
-      projects: [
-        {
-          client: "Civil Separation NZ",
-          description:
-            "A website built for a legal advisor providing civil separation services online, offering information and resources for clients.",
-
-          myContribution: [
-            "Implemented SEO improvements using the RankMath plugin, increasing the site’s SEO score from 50% to 70%.",
-            "Updated the application form layout from a single-column design to a structured, user-friendly multi-column format.",
-            "Enhanced the form’s PDF output and email submission format to ensure clients receive professional copies upon submission.",
-            "Set up Google reCAPTCHA on the form to prevent spam submissions.",
-            "Configured navigation, interactive features, and site components for a seamless user experience.",
-            "Organised and optimised media assets for use across the site.",
-            "Responsible for ongoing site maintenance and updates.",
-          ],
-          tools: {
-            frameworks: {
-              frontend: ["Divi theme on WordPress"],
-            },
-            tools: [
-              "RankMath SEO plugin",
-              "ContactForm7 plugin",
-              "CF7 PDF extension",
-              "Google reCAPTCHA plugin",
-            ],
-          },
-          href: "civil-separation-nz",
-          poster: "Civil_Separation_NZ_sml7cs",
-          videoMedia: [
-            {
-              src: "Civil_Separation_NZ_sml7cs",
-              alt: "Civil Separation NZ Application Form",
-            },
-          ],
-          liveUrl: "https://civilseparation.co.nz/solo-application/",
-        },
-        {
-          client: "Online Design Portfolio",
-          description:
-            "An online portfolio built for a design student at AUT to showcase his creative work and academic projects. The site is being developed using a Framer template, allowing flexible layout adjustments, visual editing, and quick iteration without coding. The project is ongoing and continues to be refined as new design assets become available.",
-          myContribution: [
-            "Collaborated with the client, a design student at AUT, to understand the structure and presentation he wanted for his portfolio.",
-            "Selected and customised a Framer template to match the client’s preferred visual style and requirements.",
-            "Arranged sections and components using Framer’s visual builder, including About, Work Showcase, and Contact areas.",
-            "Adjusted colours, typography, and layout spacing to align with the client’s design direction.",
-            "Organised and prepared the client’s media assets for use across the site.",
-            "Configured navigation, transitions, and interactive features using Framer’s built-in tools.",
-            "Published test versions for client review and made ongoing refinements based on feedback.",
-          ],
-          tools: {
-            frameworks: {
-              frontend: ["Framer"],
-            },
-          },
-          href: "ahmeds-portfolio",
-          poster: "Ahmed_s_Portfolio_hpyn43",
-          videoMedia: [
-            {
-              src: "Ahmed_s_Portfolio_hpyn43",
-              alt: "Ahmed's Portfolio Landing Page",
-            },
-          ],
-          liveUrl: "https://centered-friday-033849.framer.app/",
-        },
-        {
-          client: "My portfolio",
-          description:
-            "This is my personal portfolio website designed to showcase my development skills and projects. It features an About Me section, a Projects page with live previews of deployed applications using embedded iframes, and a Contact page with a fully functional email form. The form is powered by SendRail and connected via a custom REST API built with Node.js and Express. Developed using Next.js, TypeScript, and Jotai for state management, the site is responsive, fast, and deployed on Vercel for global accessibility.",
-          myContribution: [
-            "Developed a personal portfolio site using Next.js and TypeScript, structured for performance, scalability, and responsiveness.",
-            "Designed and built an About Me section to communicate my background, skills, and goals as a developer.",
-            "Implemented a Projects page with live embedded previews (iframes) of my deployed applications to provide real-time interaction for visitors.",
-            "Created a Contact page with an integrated form that uses SendRail to send emails directly, improving accessibility for potential collaborators or clients.",
-            "Built and connected a REST API using Node.js and Express to handle form submissions and securely deliver messages via SendRail.",
-            "Utilized Jotai for efficient and modular state management, with clearly organized folders for atoms and custom hooks.",
-            "Deployed the portfolio to Vercel with continuous deployment and optimized performance via edge functions.",
-            "Managed source control through Git, maintaining clear version history and structured development branches.",
-          ],
-          tools: {
-            frameworks: {
-              frontend: ["Next.js"],
-              styling: ["Tailwind CSS"],
-              backend: ["Express.js"],
-            },
-            libraries: { frontend: ["Jotai"] },
-            languages: { programming: ["TypeScript"] },
-            runtimeEnvironments: ["Node.js"],
-            versionControl: ["Git"],
-            api: {
-              architecture: ["RESTful API"],
-            },
-          },
-          href: "my-portfolio",
-          poster: "Portfolio_hillwf",
-          videoMedia: [
-            {
-              src: "Portfolio_hillwf",
-              alt: "My Portfolio Landing Page",
-            },
-          ],
-          gitRepository: "https://github.com/MaryanneG3/my-portfolio.git",
-          liveUrl: "https://maryanne-galo.vercel.app/",
         },
       ],
     },
