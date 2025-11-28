@@ -8,6 +8,12 @@ export const navigationLinks = [
     imageURL: "home_gjx8zt",
   },
   {
+    key: "projects",
+    title: "My Projects",
+    href: "/my-projects",
+    imageURL: "my-projects_uw6jiu",
+  },
+  {
     key: "about",
     title: "About me",
     href: "/about-me",
@@ -16,12 +22,6 @@ export const navigationLinks = [
       href: `#${item.label.toLowerCase().replace(/\s+/g, "-")}`,
     })),
     imageURL: "about-me_ow2dpb",
-  },
-  {
-    key: "projects",
-    title: "My Projects",
-    href: "/my-projects",
-    imageURL: "my-projects_uw6jiu",
   },
   {
     key: "contact",
