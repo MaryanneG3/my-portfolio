@@ -38,7 +38,7 @@ export default function About() {
                   <div
                     key={index}
                     id={link.label.toLowerCase().replace(/\s+/g, "-")}
-                    className="flex flex-col justify-start items-start gap-6 lg:gap-11 pr-0 md:pr-5 pl-0 md:pl-8 lg:pl-10 lg:pr-10 h-full w-full pb-20 pt-5 lg:pt-8 sm:bg-transparent md:bg-white/60 lg:bg-white/70 rounded-2xl lg:shadow-md"
+                    className="flex flex-col justify-start items-start gap-6 lg:gap-11 pr-0 md:pr-5 pl-0 md:pl-8 lg:pl-10 lg:pr-10 h-full w-full pb-20 pt-5 lg:pt-8 bg-transparent md:bg-white/60 lg:bg-white/70 rounded-2xl lg:shadow-md"
                   >
                     <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-purple-950">
                       {link.label}
