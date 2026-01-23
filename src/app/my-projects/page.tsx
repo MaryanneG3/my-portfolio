@@ -31,14 +31,14 @@ function Projects() {
     <div className="h-full w-full">
       <video
         className="fixed top-0 left-0 w-full h-full object-cover z-0 pointer-events-none select-none"
-        src="/videos/light-bg-enhanced.mp4"
+        src="/videos/purple-undertone-2.mp4"
         autoPlay
         loop
         muted
         playsInline
         poster="/images/background/ocean-bg-light.webp"
       />
-      <div className="relative z-10 flex flex-col lg:flex-row justify-between items-center h-full w-full bg-gradient-to-b from-purple-50/70 to-purple-500/30 lg:from-purple-50/50 lg:to-purple-500/">
+      <div className="relative z-10 flex flex-col lg:flex-row justify-between items-center h-full w-full bg-white/20">
         <Sidebar />
 
         <motion.div

@@ -11,13 +11,13 @@ export default function About() {
     <div className="h-full w-full">
       <video
         className="fixed top-0 left-0 w-full h-full object-cover z-0 pointer-events-none select-none"
-        src="/videos/light-bg-enhanced.mp4"
+        src="/videos/purple-undertone-2.mp4"
         autoPlay
         loop
         muted
         playsInline
       />
-      <div className="relative z-10 flex flex-col lg:flex-row justify-between items-center h-full w-full bg-gradient-to-b from-purple-50/70 to-purple-500/30 lg:from-purple-50/50 lg:to-purple-500/20">
+      <div className="relative z-10 flex flex-col lg:flex-row justify-between items-center h-full w-full bg-white/20">
         <Sidebar />
 
         <motion.div
@@ -38,7 +38,7 @@ export default function About() {
                   <div
                     key={index}
                     id={link.label.toLowerCase().replace(/\s+/g, "-")}
-                    className="flex flex-col justify-start items-start gap-6 lg:gap-11 pr-0 md:pr-5 pl-0 md:pl-8 lg:pl-10 lg:pr-10 h-full w-full pb-20 pt-5 lg:pt-8 bg-transparent md:bg-white/60 lg:bg-white/70 rounded-2xl lg:shadow-md"
+                    className="flex flex-col justify-start items-start gap-6 lg:gap-11 pr-0 md:pr-5 pl-0 md:pl-8 lg:pl-10 lg:pr-10 h-full w-full pb-20 pt-5 lg:pt-8 bg-transparent md:bg-white/50 lg:bg-white/40 rounded-xl lg:shadow-md"
                   >
                     <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-purple-950">
                       {link.label}
