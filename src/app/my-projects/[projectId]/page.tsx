@@ -22,7 +22,7 @@ export default function ProjectPage() {
     <div className="h-full min-h-screen w-full">
       <video
         className="fixed top-0 left-0 w-full h-full object-cover z-0 pointer-events-none select-none"
-        src="/videos/purple-undertone-2.mp4"
+        src="/videos/Purple-Undertone-2.mp4"
         autoPlay
         loop
         muted
