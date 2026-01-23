@@ -41,15 +41,6 @@ const Sidebar = () => {
               `}
             >
               <div className="relative w-12 h-12 border-none md:border md:border-r-2">
-                {/* <Image
-                  alt={link.title}
-                  src={`/images/icons/${link.title
-                    .toLowerCase()
-                    .split(" ")
-                    .join("-")}.png`}
-                  fill
-                  sizes="(max-width: 768px) 20vw, (max-width: 1200px) 10vw, 5vw"
-                /> */}
                 <CldImage
                   src={link.imageURL}
                   alt={link.title}
@@ -111,7 +102,7 @@ const Sidebar = () => {
                           const targetUrl = `${link.href}${sublink.href}`;
                           if (pathname === link.href) {
                             const element = document.getElementById(
-                              sublink.href.replace("#", "")
+                              sublink.href.replace("#", ""),
                             );
                             if (element) {
                               element.scrollIntoView({ behavior: "smooth" });

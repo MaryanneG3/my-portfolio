@@ -19,7 +19,7 @@ function Home() {
     <div className="flex flex-row lg:flex-col justify-center items-center h-full w-full">
       <video
         className="fixed top-0 left-0 w-full h-full object-cover z-0 pointer-events-none select-none"
-        src="/videos/light-bg-enhanced.mp4"
+        src="/videos/Purple-Undertone-2.mp4"
         poster="/images/background/ocean-bg-light.webp"
         autoPlay
         loop
@@ -27,7 +27,7 @@ function Home() {
         playsInline
       />
 
-      <main className="relative z-10 flex flex-col md:flex-col lg:flex-row items-center justify-start lg:justify-evenly w-full h-full bg-gradient-to-b from-purple-50/20 to-purple-500/20">
+      <main className="relative z-10 flex flex-col md:flex-col lg:flex-row items-center justify-start lg:justify-evenly w-full h-full bg-white/20">
         {!showDetails && (
           <div
             className="h-full w-full lg:w-[20%]"
@@ -71,7 +71,7 @@ function Home() {
                 <Link
                   key={link.key}
                   href={link.href}
-                  className="flex flex-col justify-center items-center w-full lg:w-[50%] py-5 h-[30px] lg:h-auto lg:min-h-[20%] rounded-3xl text-white hover:text-purple-950 hover:shadow-xl hover:shadow-yellow-200/20 lg:hover:bg-gradient-to-b lg:hover:from-purple-900/50 lg:hover:via-purple-900/20 lg:hover:to-yellow-100/70 hover:bg-amber-100/40 bg-purple-900/20"
+                  className="flex flex-col justify-center items-center w-full lg:w-[50%] py-5 h-[30px] lg:h-auto lg:min-h-[20%] rounded-3xl text-purple-950 hover:shadow-xl hover:shadow-yellow-200/20 lg:hover:bg-gradient-to-b lg:hover:from-purple-900/50 lg:hover:via-purple-900/20 lg:hover:to-yellow-100/70 hover:bg-amber-100/40 bg-purple-100/50"
                   onMouseOver={() => setHoveredLinkIndex(index)}
                   onMouseLeave={() => setHoveredLinkIndex(null)}
                 >
