@@ -86,6 +86,41 @@ export const projectContent: ProjectContent = {
           liveUrl: "https://centered-friday-033849.framer.app/",
         },
         {
+          client: "Civil Separation NZ",
+          description:
+            "A website built for a legal advisor providing civil separation services online, offering information and resources for clients.",
+
+          myContribution: [
+            "Implemented SEO improvements using the RankMath plugin, increasing the site’s SEO score from 50% to 70%.",
+            "Updated the application form layout from a single-column design to a structured, user-friendly multi-column format.",
+            "Enhanced the form’s PDF output and email submission format to ensure clients receive professional copies upon submission.",
+            "Set up Google reCAPTCHA on the form to prevent spam submissions.",
+            "Configured navigation, interactive features, and site components for a seamless user experience.",
+            "Organised and optimised media assets for use across the site.",
+            "Responsible for ongoing site maintenance and updates.",
+          ],
+          tools: {
+            frameworks: {
+              frontend: ["Divi theme on WordPress"],
+            },
+            tools: [
+              "RankMath SEO plugin",
+              "ContactForm7 plugin",
+              "CF7 PDF extension",
+              "Google reCAPTCHA plugin",
+            ],
+          },
+          href: "civil-separation-nz",
+          poster: "Civil_Separation_NZ_sml7cs",
+          videoMedia: [
+            {
+              src: "Civil_Separation_NZ_sml7cs",
+              alt: "Civil Separation NZ Application Form",
+            },
+          ],
+          liveUrl: "https://civilseparation.co.nz/solo-application/",
+        },
+        {
           client: "Trade Materials Live NZ",
           description:
             "Trade Materials Live NZ is a web-based platform designed to save New Zealand tradies time, reduce costs, and simplify the quoting and procurement process. Built as a prototype during the Bolt.new Hackathon 2024, the application allows tradies to select their role, discover local stores, compare prices for required materials, build quotes, and generate invoices. The platform leverages AI-powered code generation and web scraping to provide real-time pricing and stock information from various suppliers across New Zealand.",
@@ -126,41 +161,6 @@ export const projectContent: ProjectContent = {
           gitRepository:
             "https://github.com/MaryanneG3/Tradie-Materials-Live-MVP",
           liveUrl: "https://tradie-materials-live-nz.netlify.app/",
-        },
-        {
-          client: "Civil Separation NZ",
-          description:
-            "A website built for a legal advisor providing civil separation services online, offering information and resources for clients.",
-
-          myContribution: [
-            "Implemented SEO improvements using the RankMath plugin, increasing the site’s SEO score from 50% to 70%.",
-            "Updated the application form layout from a single-column design to a structured, user-friendly multi-column format.",
-            "Enhanced the form’s PDF output and email submission format to ensure clients receive professional copies upon submission.",
-            "Set up Google reCAPTCHA on the form to prevent spam submissions.",
-            "Configured navigation, interactive features, and site components for a seamless user experience.",
-            "Organised and optimised media assets for use across the site.",
-            "Responsible for ongoing site maintenance and updates.",
-          ],
-          tools: {
-            frameworks: {
-              frontend: ["Divi theme on WordPress"],
-            },
-            tools: [
-              "RankMath SEO plugin",
-              "ContactForm7 plugin",
-              "CF7 PDF extension",
-              "Google reCAPTCHA plugin",
-            ],
-          },
-          href: "civil-separation-nz",
-          poster: "Civil_Separation_NZ_sml7cs",
-          videoMedia: [
-            {
-              src: "Civil_Separation_NZ_sml7cs",
-              alt: "Civil Separation NZ Application Form",
-            },
-          ],
-          liveUrl: "https://civilseparation.co.nz/solo-application/",
         },
         {
           client: "My portfolio",
