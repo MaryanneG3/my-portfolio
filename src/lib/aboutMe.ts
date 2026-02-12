@@ -12,7 +12,7 @@ export const aboutContent = {
     {
       label: "My full-stack developer journey",
       description: [
-        "My journey into full-stack development kicked off in 2019 when I was studying Mechanical Engineering at the Mongolian University of Science and Technology in Ulaanbaatar. I took a mandatory C programming course which ended up being the highlight of my semester.",
+        "My journey into full-stack development kicked off in 2019 when I was studying Electrical Engineering at the Mongolian University of Science and Technology in Ulaanbaatar. I took a mandatory C programming course which ended up being the highlight of my semester.",
         "When Covid hit, I went back to Samoa and switched majors to Computing and Mathematics at the National University of Samoa. That’s where I got into web development—learning HTML, CSS, and JavaScript in class, and diving into online tutorials and YouTube in my spare time.",
         "While studying in Samoa, I came across Mission Ready, a tech school in New Zealand. After getting accepted into their Full-Stack Accelerator Program, I moved to Auckland, earned two certifications, completed an internship, and really grew as a developer—both in skills and confidence.",
         "These days, I’m continuing to level up—especially by exploring how AI can be used to boost productivity and create smarter, more efficient websites.",
